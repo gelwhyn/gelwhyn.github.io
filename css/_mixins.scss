@@ -1,0 +1,23 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin default-spacing{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin default-border{
+    border-width: 0;
+}
+
+/* $radius is the parameter of the function */
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}

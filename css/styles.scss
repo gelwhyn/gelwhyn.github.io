@@ -1,0 +1,143 @@
+/* file import */
+
+@import 'variables';
+@import 'mixins';
+@import 'card';
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    @include default-spacing();
+    min-height: 100vh;
+    scroll-behavior: smooth;
+
+    .text--align-center{
+        text-align: center;
+    }
+}
+
+body {
+    @include default-spacing();
+    font-family: $fonts; /* variable usage */
+    min-height: 100vh;
+    height: 100vh;
+    h1{
+        margin: 0;
+        font-size: 900%;
+        font-family: $fonts; 
+        font-weight: 500;
+        color: $secondary-color;
+    }
+    p{
+        font-family: $fonts;
+        font-weight: 200;
+        color: $secondary-color;
+        // font-size: 150%;
+    }
+    .button{
+        background-color: $secondary-color;
+        color: $primary-color;
+        text-decoration: none;
+        border-radius: 50px;
+        border-width: 0px;
+        padding: 10px 15px
+    }
+    .container{
+        height: 100vh;
+        width: 100%;
+        margin:0;
+        display: block;
+        margin-right: 54px;
+    }
+    .menu{
+        background-color: #11ffee00;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border-width: 0;
+        padding-right: 1%;
+        position: fixed;
+        right: 0; 
+        top: 0;
+
+        .menu__item__icon{
+            color: $accent-color;
+        }
+        .menu__item{
+            margin-bottom: 20%;
+        }
+    
+        .menu__item--active{
+            --fa-animation-duration: 2s;
+            // size: 14px;
+        }
+    }
+
+    .container-frontpage{
+        background-color: $primary-color;
+        @include flex-center();
+    }
+
+    .container-aboutme{
+        @include default-spacing();
+        background-color: $primary-color;
+        color: $secondary-color;
+
+        .container-aboutme__header{
+            margin:0;
+            padding: 5px 10px;
+            font-weight: 500;
+            font-size: 300%;
+            text-align: center;
+
+        }
+        .container-aboutme__grid{
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+        }
+        .container-aboutme__imagecontainer{
+            float: left;
+            width: 50%;
+
+            .container-aboutme__imagecontainer__image{
+                float: right;
+                width: 25%;
+                border-radius: 60%;
+                margin-right: 5%;
+
+            }
+        }
+        .container-aboutme__infocontainer{
+            float: right;
+            width: 50%;
+
+            .container-aboutme__infocontainer__header{
+                
+            }
+            .container-aboutme__infocontainer__content{
+                font-size: large;
+
+            }
+        }
+        .container-aboutme__moreinfocontainer{
+            @include flex-center();
+            // background-color:;
+            padding: 10px 30%;
+            width: 100%;
+            display: flex;
+            
+        }
+    }
+
+    .container-skills{
+        @include default-spacing();
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+}
+

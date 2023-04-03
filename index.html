@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/9bbc10a37f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>card with sass</title>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Menu/Navbar -->
+      <div class="menu" id="menu">
+        <a class="menu__item" id="menu__item__frontpage" href="#frontpage">
+          <i
+            class="fa-solid fa-circle fa-sm fa-beat menu__item__icon menu__item--active"
+          ></i>
+        </a>
+        <a class="menu__item" id="menu__item__aboutme" href="#aboutme">
+          <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
+        </a>
+        <a class="menu__item" href="#skills">
+          <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
+        </a>
+      </div>
+
+      <!-- Front Page -->
+      <div class="container container-frontpage" id="frontpage">
+        <div class="container-frontpage__content">
+          <h1 class="container-frontpage__header text--align-center">
+            Gelwhyn Abad
+          </h1>
+          <p class="text--align-center">
+            Software Engineer | Lorem Ipsum | Lorem
+          </p>
+        </div>
+      </div>
+
+      <!-- About Me -->
+      <div class="container container-aboutme" id="aboutme">
+        <h2 class="container-aboutme__header">ABOUT ME</h2>
+        <div class="container-aboutme__grid">
+          <div class="container-aboutme__imagecontainer">
+            <img
+              class="container-aboutme__imagecontainer__image"
+              src="https://www.clevelanddentalhc.com/wp-content/uploads/2018/03/sample-avatar.jpg"
+            />
+          </div>
+          <div class="container-aboutme__infocontainer">
+            <h3 class="container-aboutme__infocontainer__header">Full Name</h3>
+            <p class="container-aboutme__infocontainer__content">Gelwhyn Abad</p>
+
+            <h3 class="container-aboutme__infocontainer__header">Nickname</h3>
+            <p class="container-aboutme__infocontainer__content">Gwen</p>
+
+            <h3 class="container-aboutme__infocontainer__header">Email</h3>
+            <p class="container-aboutme__infocontainer__content">abadgelwhyn@gmail.com</p>
+          </div>
+        </div>
+        <div class="container-aboutme__moreinfocontainer">
+            <p class="text--align-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem maxime quisquam, quaerat corrupti cumque laboriosam et eum! Dolorum, libero! Rem provident eligendi consectetur quos inventore numquam! Architecto voluptate temporibus deserunt.</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="container container-aboutme" id="skills">
+        <h2>Skills</h2>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

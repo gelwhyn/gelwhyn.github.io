@@ -1,0 +1,129 @@
+/* file import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
+/* $radius is the parameter of the function */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+html .text--align-center {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, sans-serif; /* variable usage */
+  min-height: 100vh;
+  height: 100vh;
+}
+body h1 {
+  margin: 0;
+  font-size: 900%;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #f0e7ca;
+}
+body p {
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 200;
+  color: #f0e7ca;
+}
+body .button {
+  background-color: #f0e7ca;
+  color: #325a42;
+  text-decoration: none;
+  border-radius: 50px;
+  border-width: 0px;
+  padding: 10px 15px;
+}
+body .container {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: block;
+  margin-right: 54px;
+}
+body .menu {
+  background-color: rgba(17, 255, 238, 0);
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-width: 0;
+  padding-right: 1%;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+body .menu .menu__item__icon {
+  color: #fadf88;
+}
+body .menu .menu__item {
+  margin-bottom: 20%;
+}
+body .menu .menu__item--active {
+  --fa-animation-duration: 2s;
+}
+body .container-frontpage {
+  background-color: #325a42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .container-aboutme {
+  margin: 0;
+  padding: 0;
+  background-color: #325a42;
+  color: #f0e7ca;
+}
+body .container-aboutme .container-aboutme__header {
+  margin: 0;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 300%;
+  text-align: center;
+}
+body .container-aboutme .container-aboutme__grid {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+body .container-aboutme .container-aboutme__imagecontainer {
+  float: left;
+  width: 50%;
+}
+body .container-aboutme .container-aboutme__imagecontainer .container-aboutme__imagecontainer__image {
+  float: right;
+  width: 25%;
+  border-radius: 60%;
+  margin-right: 5%;
+}
+body .container-aboutme .container-aboutme__infocontainer {
+  float: right;
+  width: 50%;
+}
+body .container-aboutme .container-aboutme__infocontainer .container-aboutme__infocontainer__content {
+  font-size: large;
+}
+body .container-aboutme .container-aboutme__moreinfocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 30%;
+  width: 100%;
+  display: flex;
+}
+body .container-skills {
+  margin: 0;
+  padding: 0;
+  background-color: #325a42;
+  color: #f0e7ca;
+}/*# sourceMappingURL=styles.css.map */
