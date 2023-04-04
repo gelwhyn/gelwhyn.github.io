@@ -10,9 +10,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>card with sass</title>
+    <title>Gelwhyn Abad</title>
   </head>
-  <body>
+  <body id="body">
     <div class="main">
       <!-- Menu/Navbar -->
       <div class="menu" id="menu">
@@ -27,13 +27,19 @@
         <a class="menu__item" href="#skills">
           <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
         </a>
+        <a class="menu__item" href="#experience">
+            <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
+          </a>
       </div>
 
       <!-- Front Page -->
       <div class="container container-frontpage" id="frontpage">
         <div class="container-frontpage__content">
-          <h1 class="container-frontpage__header text--align-center">
-            Gelwhyn Abad
+          <h1
+            class="container-frontpage__content-header text--align-center anim-typewriter"
+            id="name"
+          >
+            GELWHYN ABAD
           </h1>
           <p class="text--align-center">
             Software Engineer | Lorem Ipsum | Lorem
@@ -45,31 +51,119 @@
       <div class="container container-aboutme" id="aboutme">
         <h2 class="container-aboutme__header">ABOUT ME</h2>
         <div class="container-aboutme__grid">
-          <div class="container-aboutme__imagecontainer">
+          <div class="container-aboutme__image-container">
             <img
-              class="container-aboutme__imagecontainer__image"
-              src="https://www.clevelanddentalhc.com/wp-content/uploads/2018/03/sample-avatar.jpg"
+              class="container-aboutme__image-container__image"
+              alt="profile"
+              src="img/gwen-bluebg.png"
             />
           </div>
-          <div class="container-aboutme__infocontainer">
-            <h3 class="container-aboutme__infocontainer__header">Full Name</h3>
-            <p class="container-aboutme__infocontainer__content">Gelwhyn Abad</p>
+          <div class="container-aboutme__info-container">
+            <h3 class="container-aboutme__info-container__header">Full Name</h3>
+            <p class="container-aboutme__info-container__content">
+              Gelwhyn Abad
+            </p>
 
-            <h3 class="container-aboutme__infocontainer__header">Nickname</h3>
-            <p class="container-aboutme__infocontainer__content">Gwen</p>
+            <h3 class="container-aboutme__info-container__header">Nickname</h3>
+            <p class="container-aboutme__info-container__content">Gwen</p>
 
-            <h3 class="container-aboutme__infocontainer__header">Email</h3>
-            <p class="container-aboutme__infocontainer__content">abadgelwhyn@gmail.com</p>
+            <h3 class="container-aboutme__info-container__header">Email</h3>
+            <p class="container-aboutme__info-container__content">
+              abadgelwhyn@gmail.com
+            </p>
           </div>
         </div>
-        <div class="container-aboutme__moreinfocontainer">
-            <p class="text--align-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem maxime quisquam, quaerat corrupti cumque laboriosam et eum! Dolorum, libero! Rem provident eligendi consectetur quos inventore numquam! Architecto voluptate temporibus deserunt.</p>
+        <div class="container-aboutme__more-info-container">
+          <p class="text--align-center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+            maxime quisquam, quaerat corrupti cumque laboriosam et eum! Dolorum,
+            libero! Rem provident eligendi consectetur quos inventore numquam!
+            Architecto voluptate temporibus deserunt.
+          </p>
+        </div>
+        <div class="container-aboutme__interests-container">
+          <h3 class="container-aboutme__interests-container__header">
+            My Interests
+          </h3>
+          <div
+            class="container-aboutme__interests-container__icons"
+            id="interests-container__icons"
+          >
+            <i
+              class="fa-sharp fa-solid fa-book-open-reader fa-3x interests-container__icon"
+            ></i>
+            <i class="fa-solid fa-gamepad fa-3x interests-container__icon"></i>
+            <i class="fa-solid fa-cat fa-3x interests-container__icon"></i>
+            <i
+              class="fa-solid fa-mobile-screen-button fa-3x interests-container__icon"
+            ></i>
+            <i class="fa-solid fa-file-pen fa-3x interests-container__icon"></i>
+          </div>
+        </div>
+        <div class="container-aboutme__download-button">
+          <a
+            class="button"
+            href="https://drive.google.com/file/d/1D0jd5wZo2tQhC_IvZcqcDnuLKT_j7WdC/view?usp=sharing"
+            target="_blank"
+            download
+            >View and Download My Resume</a
+          >
         </div>
       </div>
 
       <!-- Skills -->
-      <div class="container container-aboutme" id="skills">
-        <h2>Skills</h2>
+      <div class="container container-skills" id="skills">
+        <h3 class="container-skills__header">MY SKILLS</h3>
+        <div></div>
+      </div>
+
+      <!-- Internship and Education -->
+      <div class="container container-experience" id="experience">
+        <h3 class="container-experience__header container__header">EDUCATION AND INTERNSHIP EXPERIENCE</h3>
+        <div class="container-experience__entries">
+            <div class="container-experience__entries container-experience__entries--left">
+                <div class="container-experience__entries__header">
+                    <i class="fa-solid fa-graduation-cap fa-2xl entries__icon"></i>
+                    <h4 class="entries__header">EDUCATION</h6>
+                </div>
+                <div class="container-experience__entries__entry container-experience__entries__entry--left">
+                    <p class="entry__content entry__content--bold">2019-2023</p>
+                    <p class="entry__content my0">Bachelor of Science in Computer Science with
+                        Major in Software Engineering</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;iACADEMY, Makati City</p>
+                    <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="container-experience__entries__entry mt3 container-experience__entries__entry--left">
+                    <p class="entry__content entry__content--bold">2017-2019</p>
+                    <p class="entry__content my0">Senior Highschool - Computer Programming Strand</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;iACADEMY, Makati City</p>
+                    <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="container-experience__entries--right">
+                <div class="container-experience__entries__header">
+                    <i class="fa-solid fa-briefcase fa-2xl entries__icon"></i>
+                    <h4 class="entries__header">INTERNSHIP</h6>
+                </div>
+                <div class="container-experience__entries__entry container-experience__entries__entry--right">
+                    <p class="entry__content entry__content--bold">January 2023 – April 2023</p>
+                    <p class="entry__content my0">Digital Specialist Intern</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;Datawords Philippines, Makati City</p>
+                    <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="container-experience__entries__entry mt3 container-experience__entries__entry--right">
+                    <p class="entry__content entry__content--bold">August 2022 – November 2022</p>
+                    <p class="entry__content my0">Quality Assurance or Developer (Solo Mini Project within the Team) Intern</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;Infor PSSC Inc., Taguig City</p>
+                    <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+        </div>
       </div>
     </div>
     <script src="js/script.js"></script>

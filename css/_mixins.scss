@@ -5,6 +5,14 @@
     flex-direction: column;
 }
 
+@mixin flex-center-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
 @mixin default-spacing{
     margin: 0;
     padding: 0;
