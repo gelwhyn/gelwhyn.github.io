@@ -36,13 +36,6 @@ body {
     width:100%;
     min-height: 100vh;
     height: 100vh;
-    h1{
-        margin: 0;
-        font-size: 900%;
-        font-family: $fonts; 
-        font-weight: 600;
-        color: $secondary-color;
-    }
     p{
         font-family: $fonts;
         font-weight: 400;
@@ -66,6 +59,7 @@ body {
         margin:0;
         display: block;
         margin-right: 54px;
+        background-color: $primary-color;
     }
     .container__header{
         margin:0;
@@ -102,7 +96,6 @@ body {
     }
 
     .container-frontpage{
-        background-color: $primary-color;
         @include flex-center();
 
         .container-frontpage__content-header{
@@ -110,22 +103,18 @@ body {
             text-align: center;
             white-space: nowrap;
             overflow: hidden; 
+            font-size: 10vw;
+            margin: 0;
+            font-family: $fonts; 
+            font-weight: 600;
+            color: $secondary-color;
         }
     }
 
     .container-aboutme{
         @include default-spacing();
-        background-color: $primary-color;
         color: $secondary-color;
 
-        .container-aboutme__header{
-            margin:0;
-            padding: 5px 10px;
-            font-weight: 600;
-            font-size: 300%;
-            text-align: center;
-
-        }
         .container-aboutme__grid{
             margin-top: 5%;
             margin-bottom: 5%;
@@ -163,7 +152,6 @@ body {
         }
         .container-aboutme__more-info-container{
             @include flex-center();
-            // background-color:;
             padding: 10px 30%;
             width: 100%;
             display: flex;
@@ -197,17 +185,7 @@ body {
 
     .container-skills{
         @include default-spacing();
-        background-color: $primary-color;
         color: $secondary-color;
-
-        .container-skills__header{
-            color: $secondary-color;
-            margin:0;
-            padding: 5px 10px;
-            font-weight: 600;
-            font-size: 300%;
-            text-align: center;
-        }
     }
 
     .container-experience{
@@ -241,6 +219,12 @@ body {
                 float: right;
                 @include flex-center();
             }
+
+            .container-experience__entries--scroll{
+                overflow-x: hidden;
+                overflow-y: auto;
+                // text-align:justify;
+            }
             .container-experience__entries__entry{
                 background-color: $accent-color;
                 width: 70%;
@@ -254,12 +238,6 @@ body {
                     font-weight: 500;
                 }
             }
-            // .container-experience__entries__entry--left{
-            //     box-shadow: 10px 10px #8CB9C0;
-            // }
-            // .container-experience__entries__entry--right{
-            //     box-shadow: 1px  1px 10px 10px #8CB9C0;
-            // }
         }
     }
 }

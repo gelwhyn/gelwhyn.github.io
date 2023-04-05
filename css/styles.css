@@ -34,13 +34,6 @@ body {
   min-height: 100vh;
   height: 100vh;
 }
-body h1 {
-  margin: 0;
-  font-size: 900%;
-  font-family: "Poppins", Helvetica, sans-serif;
-  font-weight: 600;
-  color: #D98481;
-}
 body p {
   font-family: "Poppins", Helvetica, sans-serif;
   font-weight: 400;
@@ -63,6 +56,7 @@ body .container {
   margin: 0;
   display: block;
   margin-right: 54px;
+  background-color: #ffffff;
 }
 body .container__header {
   margin: 0;
@@ -95,7 +89,6 @@ body .menu .menu__item--active {
   --fa-animation-duration: 2s;
 }
 body .container-frontpage {
-  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,19 +99,16 @@ body .container-frontpage .container-frontpage__content-header {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 10vw;
+  margin: 0;
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 600;
+  color: #D98481;
 }
 body .container-aboutme {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
   color: #D98481;
-}
-body .container-aboutme .container-aboutme__header {
-  margin: 0;
-  padding: 5px 10px;
-  font-weight: 600;
-  font-size: 300%;
-  text-align: center;
 }
 body .container-aboutme .container-aboutme__grid {
   margin-top: 5%;
@@ -192,16 +182,7 @@ body .container-aboutme .container-aboutme__download-button {
 body .container-skills {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
   color: #D98481;
-}
-body .container-skills .container-skills__header {
-  color: #D98481;
-  margin: 0;
-  padding: 5px 10px;
-  font-weight: 600;
-  font-size: 300%;
-  text-align: center;
 }
 body .container-experience .container-experience__entries {
   margin: 0;
@@ -241,6 +222,10 @@ body .container-experience .container-experience__entries .container-experience_
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+body .container-experience .container-experience__entries .container-experience__entries--scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 body .container-experience .container-experience__entries .container-experience__entries__entry {
   background-color: #7892B5;

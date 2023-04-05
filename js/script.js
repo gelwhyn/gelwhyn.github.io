@@ -1,7 +1,8 @@
 console.log("good")
+//do not let the viewer to scroll
+// document.body.style.overflow = "hidden";
 
 //Navigation - Setting "Active" or "Selected" button
-    //additional condi to be done for manual scrolling
 var menuContainer = document.getElementById("menu");
 var menuItems = menuContainer.getElementsByTagName("a");
 for (let i = 0; i < menuItems.length; i++) {
@@ -18,12 +19,7 @@ var icons = interestIconContainer.getElementsByTagName("i");
 
 for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener("mouseover", function(){
-        var current = document.getElementsByClassName("fa-shake");
-        if(current.length > 0){
-            current[0].classList.remove("fa-shake")
-        }
         this.classList.add("fa-shake")
-        console.log(this.classList.contains("fa-shake"))
     })
 }
 
