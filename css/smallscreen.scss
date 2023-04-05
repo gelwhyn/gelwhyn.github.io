@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
+@media screen and (max-width: 1440px) {
 * {
     box-sizing: border-box;
 }
@@ -127,7 +128,7 @@ body {
 
             .container-aboutme__image-container__image{
                 float: right;
-                width: 65%;
+                width: 50%;
                 border-radius: 60%;
                 margin-right: 5%;
                 padding: 3px;
@@ -153,7 +154,7 @@ body {
         }
         .container-aboutme__more-info-container{
             @include flex-center();
-            padding: 10px 30%;
+            padding: 1vw 10vw;
             width: 100%;
             display: flex;
             
@@ -180,7 +181,7 @@ body {
 
         .container-aboutme__download-button{
             @include flex-center();
-            padding-top: 0.5%;
+            padding-top: 3%;
             margin: 1%;
         }
     }
@@ -260,3 +261,4 @@ body {
     to{border-right-color: transparent;}
   }
 
+}
