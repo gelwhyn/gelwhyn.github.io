@@ -269,4 +269,39 @@ body .container-experience .container-experience__entries .container-experience_
   to {
     border-right-color: transparent;
   }
+}
+datalist option {
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-hsize: 0;
+}
+
+.container-skills__skill {
+  width: 70%;
+  margin: 20px auto;
+}
+.container-skills__skill .skill__range {
+  width: 100%;
+  height: 5%;
+  accent-color: #D98481;
+}
+
+.level label {
+  display: block;
+  text-align: center;
+}
+
+.level input {
+  width: 100%;
+}
+
+datalist {
+  width: 121%;
+  display: flex;
+}
+
+datalist option {
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-hsize: 0;
 }/*# sourceMappingURL=styles.css.map */
