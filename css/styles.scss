@@ -16,24 +16,30 @@ html{
     .text--align-center{
         text-align: center;
     }
+    .text--align-justify{
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    .my0{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .mt3{
+        margin-top: 3%;
+    }
+
 }
 
 body {
     @include default-spacing();
     font-family: $fonts; /* variable usage */
+    width:100%;
     min-height: 100vh;
     height: 100vh;
-    h1{
-        margin: 0;
-        font-size: 900%;
-        font-family: $fonts; 
-        font-weight: 500;
-        color: $secondary-color;
-    }
     p{
         font-family: $fonts;
-        font-weight: 200;
-        color: $secondary-color;
+        font-weight: 400;
+        color: $accent-color;
         // font-size: 150%;
     }
     .button{
@@ -42,7 +48,10 @@ body {
         text-decoration: none;
         border-radius: 50px;
         border-width: 0px;
-        padding: 10px 15px
+        padding: 10px 20px
+    }
+    .button:hover{
+        filter: brightness(102%);
     }
     .container{
         height: 100vh;
@@ -50,6 +59,15 @@ body {
         margin:0;
         display: block;
         margin-right: 54px;
+        background-color: $primary-color;
+    }
+    .container__header{
+        margin:0;
+        padding: 20px 10px;
+        font-weight: 600;
+        font-size: 300%;
+        text-align: center;
+        color: $secondary-color;
     }
     .menu{
         background-color: #11ffee00;
@@ -78,66 +96,163 @@ body {
     }
 
     .container-frontpage{
-        background-color: $primary-color;
         @include flex-center();
+
+        .container-frontpage__content-header{
+            border-right: 2px solid $secondary-color;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden; 
+            font-size: 10vw;
+            margin: 0;
+            font-family: $fonts; 
+            font-weight: 600;
+            color: $secondary-color;
+        }
     }
 
     .container-aboutme{
         @include default-spacing();
-        background-color: $primary-color;
         color: $secondary-color;
 
-        .container-aboutme__header{
-            margin:0;
-            padding: 5px 10px;
-            font-weight: 500;
-            font-size: 300%;
-            text-align: center;
-
-        }
         .container-aboutme__grid{
             margin-top: 5%;
             margin-bottom: 5%;
 
         }
-        .container-aboutme__imagecontainer{
+        .container-aboutme__image-container{
             float: left;
             width: 50%;
 
-            .container-aboutme__imagecontainer__image{
+            .container-aboutme__image-container__image{
                 float: right;
                 width: 25%;
                 border-radius: 60%;
                 margin-right: 5%;
+                padding: 3px;
+                border: 2px dotted $accent-color2;
+                box-shadow: 0 0 0 7px #fff, 
+                            0 0 0 8px #ddd;
 
             }
         }
-        .container-aboutme__infocontainer{
+        .container-aboutme__info-container{
             float: right;
             width: 50%;
 
-            .container-aboutme__infocontainer__header{
-                
+            .container-aboutme__info-container__header{
+                color: $accent-color2;
+                margin-bottom: 0%;
             }
-            .container-aboutme__infocontainer__content{
+            .container-aboutme__info-container__content{
                 font-size: large;
-
+                color: $accent-color;
+                margin-top: 0;
             }
         }
-        .container-aboutme__moreinfocontainer{
+        .container-aboutme__more-info-container{
             @include flex-center();
-            // background-color:;
             padding: 10px 30%;
             width: 100%;
             display: flex;
             
         }
+        .container-aboutme__interests-container{
+            @include flex-center();
+
+            .container-aboutme__interests-container__header{
+                margin: 0;
+                color: $secondary-color;
+            }
+
+            .container-aboutme__interests-container__icons{
+                @include flex-center-row();
+                width: 100%;
+                margin-top:0;
+            }
+            .interests-container__icon{
+                padding: 1%;
+                color: $accent-color2;
+            }
+        }
+
+        .container-aboutme__download-button{
+            @include flex-center();
+            margin-top: 2%;
+            margin: 1%;
+        }
     }
 
     .container-skills{
         @include default-spacing();
-        background-color: $primary-color;
         color: $secondary-color;
     }
+
+    .container-experience{
+        .container-experience__entries{
+            @include default-spacing();
+            @include flex-center-row();
+            // width: 100%;
+
+            .container-experience__entries__header{
+                @include flex-center-row();
+
+                .entries__icon{
+                    color: $accent-color;
+                }
+
+                .entries__header{
+                    margin-left: 5%;
+                    font-weight: 500;
+                    color: $accent-color2;
+                    font-size: 150%;
+                }
+            }
+
+            .container-experience__entries--left{
+                width: 50%;
+                float: left;
+                @include flex-center();
+            }
+            .container-experience__entries--right{
+                width: 50%;
+                float: right;
+                @include flex-center();
+            }
+
+            .container-experience__entries--scroll{
+                overflow-x: hidden;
+                overflow-y: auto;
+                // text-align:justify;
+            }
+            .container-experience__entries__entry{
+                background-color: $accent-color;
+                width: 70%;
+                padding: 1% 3%;
+                // padding: 3%;
+                box-shadow: 10px 10px #8CB9C0;
+                .entry__content{
+                    color: white;
+                }
+                .entry__content--bold{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 100%;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: $secondary-color;}
+    to{border-right-color: transparent;}
+  }
 
