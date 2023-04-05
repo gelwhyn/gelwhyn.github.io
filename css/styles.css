@@ -50,22 +50,6 @@ body .button {
 body .button:hover {
   filter: brightness(102%);
 }
-body .container {
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  display: block;
-  margin-right: 54px;
-  background-color: #ffffff;
-}
-body .container__header {
-  margin: 0;
-  padding: 20px 10px;
-  font-weight: 600;
-  font-size: 300%;
-  text-align: center;
-  color: #D98481;
-}
 body .menu {
   background-color: rgba(17, 255, 238, 0);
   align-items: center;
@@ -88,6 +72,22 @@ body .menu .menu__item {
 body .menu .menu__item--active {
   --fa-animation-duration: 2s;
 }
+body .container {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: block;
+  margin-right: 54px;
+  background-color: #ffffff;
+}
+body .container__header {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 300%;
+  text-align: center;
+  color: #D98481;
+}
 body .container-frontpage {
   display: flex;
   align-items: center;
@@ -108,11 +108,15 @@ body .container-frontpage .container-frontpage__content-header {
 body .container-aboutme {
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: #D98481;
 }
 body .container-aboutme .container-aboutme__grid {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }
 body .container-aboutme .container-aboutme__image-container {
   float: left;
@@ -120,7 +124,7 @@ body .container-aboutme .container-aboutme__image-container {
 }
 body .container-aboutme .container-aboutme__image-container .container-aboutme__image-container__image {
   float: right;
-  width: 25%;
+  width: 65%;
   border-radius: 60%;
   margin-right: 5%;
   padding: 3px;
@@ -157,6 +161,7 @@ body .container-aboutme .container-aboutme__interests-container {
 }
 body .container-aboutme .container-aboutme__interests-container .container-aboutme__interests-container__header {
   margin: 0;
+  padding-bottom: 1%;
   color: #D98481;
 }
 body .container-aboutme .container-aboutme__interests-container .container-aboutme__interests-container__icons {
@@ -168,7 +173,7 @@ body .container-aboutme .container-aboutme__interests-container .container-about
   margin-top: 0;
 }
 body .container-aboutme .container-aboutme__interests-container .interests-container__icon {
-  padding: 1%;
+  padding: 3% 5%;
   color: #91B5A9;
 }
 body .container-aboutme .container-aboutme__download-button {
@@ -176,13 +181,17 @@ body .container-aboutme .container-aboutme__download-button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2%;
+  padding-top: 0.5%;
   margin: 1%;
 }
 body .container-skills {
   margin: 0;
   padding: 0;
   color: #D98481;
+  margin-top: 5%;
+}
+body .container-experience {
+  margin-top: 5%;
 }
 body .container-experience .container-experience__entries {
   margin: 0;
@@ -260,4 +269,39 @@ body .container-experience .container-experience__entries .container-experience_
   to {
     border-right-color: transparent;
   }
+}
+datalist option {
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-hsize: 0;
+}
+
+.container-skills__skill {
+  width: 70%;
+  margin: 20px auto;
+}
+.container-skills__skill .skill__range {
+  width: 100%;
+  height: 5%;
+  accent-color: #D98481;
+}
+
+.level label {
+  display: block;
+  text-align: center;
+}
+
+.level input {
+  width: 100%;
+}
+
+datalist {
+  width: 121%;
+  display: flex;
+}
+
+datalist option {
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-hsize: 0;
 }/*# sourceMappingURL=styles.css.map */
