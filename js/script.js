@@ -28,3 +28,19 @@ for (let i = 0; i < icons.length; i++) {
         this.classList.remove("fa-shake")
     })
 }
+
+//Animation for skills icon
+var skillIconContainer = document.getElementsByClassName("container-skills__skill")
+var skillIcons = document.getElementsByClassName("skill__icon");
+
+for (let i = 0; i < skillIconContainer.length; i++) {
+  skillIconContainer[i].addEventListener("mouseover", function(){
+        this.classList.add("fa-bounce")
+    })
+}
+
+for (let i = 0; i < skillIconContainer.length; i++) {
+  skillIconContainer[i].addEventListener("mouseleave", function(){
+    this.classList.remove("fa-bounce")
+    })
+}

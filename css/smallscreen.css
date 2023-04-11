@@ -10,6 +10,7 @@
     padding: 0;
     min-height: 100vh;
     scroll-behavior: smooth;
+    margin-bottom: 3%;
   }
   html .text--align-center {
     text-align: center;
@@ -180,25 +181,76 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 3%;
+    padding-top: 1%;
     margin: 1%;
   }
   body .container-skills {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     color: #D98481;
     margin-top: 5%;
   }
+  body .container-skills .container-skills__skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1;
+    overflow: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill {
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    display: block;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .skill__label {
+    text-align: center;
+    color: #D98481;
+    margin-top: 0;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .container-skills__icon-container {
+    width: 10vw;
+    height: 10vw;
+    margin: 20px auto;
+    background-color: #7892B5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .container-skills__icon-container:hover {
+    background-color: #ffffff;
+    border: 8px solid #7892B5;
+    color: #7892B5;
+  }
+  /* Animation */
+}
+@media screen and (max-width: 1440px) and (max-width: 1050px) and (min-width: 600px) {
+  body .container-skills .container-skills__skills .container-skills__skill .skill__icon {
+    font-size: 2em;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .skill__icon--extra {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 1440px) {
   body .container-experience {
     margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   body .container-experience .container-experience__entries {
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
   }
   body .container-experience .container-experience__entries .container-experience__entries__header {
     display: flex;
@@ -231,15 +283,10 @@
     justify-content: center;
     flex-direction: column;
   }
-  body .container-experience .container-experience__entries .container-experience__entries--scroll {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
   body .container-experience .container-experience__entries .container-experience__entries__entry {
     background-color: #7892B5;
     width: 70%;
     padding: 1% 3%;
-    box-shadow: 10px 10px #8CB9C0;
   }
   body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content {
     color: white;
@@ -247,10 +294,30 @@
   body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content--bold {
     font-weight: 500;
   }
-  /* Animation */
+  body .container-experience .container-experience__entries .container-experience__entries__entry--left {
+    box-shadow: -10px -10px #8CB9C0;
+  }
+  body .container-experience .container-experience__entries .container-experience__entries__entry--right {
+    box-shadow: 10px -10px #8CB9C0;
+  }
+}
+@media screen and (max-width: 1440px) {
+  body .container-projects {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #D98481;
+  }
+}
+@media screen and (max-width: 1440px) {
   .anim-typewriter {
     animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
   }
+}
+@media screen and (max-width: 1440px) {
   @keyframes typewriter {
     from {
       width: 0;
@@ -259,6 +326,8 @@
       width: 100%;
     }
   }
+}
+@media screen and (max-width: 1440px) {
   @keyframes blinkTextCursor {
     from {
       border-right-color: #D98481;
