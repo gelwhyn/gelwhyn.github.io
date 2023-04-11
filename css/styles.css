@@ -285,14 +285,35 @@ datalist option {
   height: 5%;
   accent-color: #D98481;
 }
-
-.level label {
+.container-skills__skill .container-skills__label {
   display: block;
-  text-align: center;
 }
-
-.level input {
+.container-skills__skill .container-skills__range {
   width: 100%;
+}
+.container-skills__skill .container-skills__range:disabled::-moz-range-track {
+  background-color: blue;
+}
+.container-skills__skill input[type=range]:disabled {
+  /* Disabled Element */
+  background-color: aqua;
+}
+.container-skills__skill input[type=range]:disabled::-moz-range-track {
+  /* Disabled slider-range-track */
+  background-color: blue;
+  accent-color: blue;
+}
+.container-skills__skill input[type=range]:disabled::-webkit-slider-thumb {
+  /* Disabled slider-thumb */
+  background-color: black;
+}
+.container-skills__skill input[type=range]:disabled::-moz-range-thumb {
+  /* Disabled slider-thumb */
+  background-color: black;
+}
+.container-skills__skill input[type=range]:disabled::-ms-thumb {
+  /* Disabled slider-thumb */
+  background-color: black;
 }
 
 datalist {

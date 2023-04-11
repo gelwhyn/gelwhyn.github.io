@@ -277,15 +277,56 @@ body {
         height: 5%;
         accent-color: $secondary-color;
     }
-}
+    .container-skills__label{
+        display: block;
+        // text-align: center;
+    }
+    .container-skills__range{
+        width: 100%;
 
-.level label {
-    display: block;
-    text-align: center;
-}
+        &:disabled{
+            &::-webkit-slider-runnable-track{
+                // background: green;
+            }
+            &::-moz-range-track{
+                background-color: blue;
+            }
+        }
+    }
+    input[type=range]:disabled {
+    /* Disabled Element */
+    background-color: aqua;
+    
+    }
 
-.level input {
-    width: 100%;
+    // input[type=range]:disabled::-webkit-slider-runnable-track {
+    //     /* Disabled slider-runnable-track */
+    //     accent-color: blue;
+    //     background-color: pink;
+    // }
+
+    input[type=range]:disabled::-moz-range-track {
+        /* Disabled slider-range-track */
+        background-color: blue;
+        accent-color: blue;
+
+    }
+
+    input[type=range]:disabled::-webkit-slider-thumb {
+        /* Disabled slider-thumb */
+        background-color: black;
+    }
+
+    input[type=range]:disabled::-moz-range-thumb {
+        /* Disabled slider-thumb */
+        background-color: black;
+        // display: none;
+    }
+    input[type=range]:disabled::-ms-thumb {
+        /* Disabled slider-thumb */
+        background-color: black;
+        // display: none;
+    }
 }
 
 datalist {
