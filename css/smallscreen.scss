@@ -53,6 +53,7 @@ body {
     }
     .button:hover{
         filter: brightness(102%);
+        cursor: pointer;
     }
     .menu{
         background-color: #11ffee00;
@@ -302,8 +303,152 @@ body {
         @include default-spacing();
         @include flex-center();
         color: $secondary-color;
-        .container-projects__header{
 
+        .container-projects__entries{
+            display: flex;
+            margin: 5%;
+        }
+
+        .container-projects__entries--left{
+            width: 49%;
+            float: left;
+            margin-right: 1%;
+        }
+        .container-projects__entries--right{
+            width: 49%;
+            float: right;
+            margin-left: 1%;
+        }
+        .container-projects__project{
+            width: 100%;
+            display: flex;
+            direction: row;
+            margin: 1%;
+            margin-top: 2%;
+            box-shadow: 1px 4px 7px #b3b3b3;
+            
+
+            .project__image-container{
+                width: 30%;
+                border: 10px solid $accent-color2;
+                border-right: none;
+                padding: 1vw;
+                @include flex-center();
+
+                .project__image{
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+            .project__description{
+                @include flex-center();
+                width: 70%;
+                background-color: $accent-color2;
+                padding: 1vw;
+                p{
+                    color: white;
+                    font-size: 1vw;
+                }
+            }
+
+        //     .project__image-container::before{
+        //         content: attr(data-label);
+        //         text-align: center;
+        //         margin: 0 auto;
+        //         align-items: center;
+        //         color: white;
+        //     }
+
+        //     .project__image-container{
+        //         width: 100%;
+        //         background-image: url("../img/project-placeholder.png");
+        //         background-color: $accent-color;
+        //         background-blend-mode: lighten;
+        //         background-size: contain;
+        //         background-repeat: no-repeat;
+        //         background-size: 100%;
+        //     }
+        //     .project__image{
+        //         width: 100%;
+        //         opacity: 0;
+        //     }
+        // }
+        // .container-projects__project:hover{
+        //     .project__image-container{
+        //         width: 100%;
+        //         // background-image: url("../img/project-placeholder.png");
+        //         background-blend-mode: normal;
+        //     }
+        //     // .project__image{
+        //     //     width: 100%;
+        //     //     opacity: 1;
+        //     // }
+        }
+        .container-projects__project:hover{
+            cursor: pointer;
+            .project__description{
+                background-color: white;
+                border: 10px solid $accent-color2;
+                border-left: none;
+                p{
+                    color: $accent-color2;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+
+    .project__modal{
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+        .project__modal__content{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: $primary-color;
+            border: 10px solid $accent-color2;
+            width: 50%;
+            overflow: auto;
+            .project__modal__action-button{
+                margin: 1% 2%;
+                float: right;
+                display: block;
+                .modal__btn--close{
+                    color: $accent-color2;
+                }
+                .modal__btn--close:hover{
+                    color: $secondary-color;
+                } 
+            }
+            .project__modal__name{
+                .project__name{
+                    margin: 1% 2%;
+                }
+            }
+            .project__modal__images{
+                @include flex-center-row();
+                .project__image{
+                    width: 30%;
+                }
+            }
+            .project__modal__images__btn-container{
+                @include flex-center-row();
+                margin-top: 2%;
+                .images__btn{
+                    margin: 0px 0.5%;
+                }
+            }
         }
     }
 

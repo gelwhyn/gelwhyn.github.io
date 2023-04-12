@@ -274,7 +274,7 @@
                         ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
-            <div class="container-experience__entries--right container-experience__entries--scroll">
+            <div class="container-experience__entries--right">
                 <div class="container-experience__entries__header">
                     <i class="fa-solid fa-briefcase fa-lg entries__icon"></i>
                     <h4 class="entries__header">INTERNSHIP</h6>
@@ -299,11 +299,65 @@
       <!-- Projects -->
       <div class="container container-projects mt3" id="projects">
         <h3 class="container__header container-projects__header">PROJECTS</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores cumque, 
-          quia sit velit eum assumenda rerum dignissimos debitis ipsum magni atque iure 
-          vel nihil ullam unde ut rem error quas.</p>
+        <div class="container-projects__entries">
+        <div class="container-projects__entries--left">
+          <div class="container-projects__project" id="cmon">
+            <div class="project__image-container">
+              <img src="img/cmon.png" class="project__image"/>
+            </div>
+            <div class="project__description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nam saepe obcaecati expedita minima quae nisi voluptas 
+                libero aut nemo perspiciatis voluptatum</p>
+            </div>
+          </div>
+          <div class="container-projects__project mt3" id="modernfix">
+            <div class="project__image-container">
+              <img src="img/modernfix.png" class="project__image"/>
+            </div>
+            <div class="project__description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nam saepe obcaecati expedita minima quae nisi voluptas 
+                libero aut nemo perspiciatis voluptatum</p>
+            </div>
+          </div>
+        </div>
+        <div class="container-projects__entries--right">
+          <div class="container-projects__project" id="trace">
+            <div class="project__image-container">
+              <img src="img/trace.png" class="project__image"/>
+            </div>
+            <div class="project__description">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nam saepe obcaecati expedita minima quae nisi voluptas 
+                libero aut nemo perspiciatis voluptatum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="project__modal" id="modal">
+        <div class="project__modal__content">
+          <div class="project__modal__action-button">
+            <a class="modal__btn--close" id="modalClose"><i class="fa-solid fa-circle-xmark"></i></a>
+          </div>
+          <div class="project__modal__name" id="projectName">
+            <!-- <h4 class="project__name">something</h4> -->
+          </div>
+          <div class="project__modal__images" id="projectImages">
+            <!-- carousel? -->
+          </div>
+          <div class="project__modal__images__btn-container">
+            <button onclick="" class="button images__btn" id="previous"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="" class="button images__btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="project__modal__description">
+            <ul id="projectDescription">
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/script.js"></script>
   </body>
 </html>
+
+<!-- gawa isang modal then change values nalang sa js depending on what project was selected (addeventlistener) -->
