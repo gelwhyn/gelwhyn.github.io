@@ -50,7 +50,7 @@ body {
         padding: 10px 20px
     }
     .button:hover{
-        filter: brightness(102%);
+        filter: brightness(95%);
     }
     .menu{
         background-color: #11ffee00;
@@ -176,6 +176,9 @@ body {
                 padding: 3% 5%;
                 color: $accent-color2;
             }
+            .container-aboutme__interests__label{
+                margin: 0px;
+            }
         }
 
         .container-aboutme__download-button{
@@ -283,6 +286,145 @@ body {
             }
         }
     }
+
+    .container-projects{
+        @include flex-center();
+        color: $secondary-color;
+        margin-top: 5%;
+
+        .container-projects__entries{
+            display: flex;
+            margin: 5%;
+        }
+
+        .container-projects__entries--left{
+            width: 49%;
+            float: left;
+            margin-right: 1%;
+        }
+        .container-projects__entries--right{
+            width: 49%;
+            float: right;
+            margin-left: 1%;
+        }
+        .container-projects__project{
+            width: 100%;
+            display: flex;
+            direction: row;
+            margin: 1%;
+            margin-top: 2%;
+            box-shadow: 1px 4px 7px $gray;
+            
+
+            .project__image-container{
+                width: 30%;
+                border: 10px solid $accent-color2;
+                border-right: none;
+                padding: 1vw;
+                @include flex-center();
+
+                .project__image{
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+            .project__description{
+                @include flex-center();
+                width: 70%;
+                background-color: $accent-color2;
+                padding: 1vw;
+                p{
+                    color: white;
+                    font-size: 1vw;
+                }
+            }
+        }
+        .container-projects__project:hover{
+            cursor: pointer;
+            .project__description{
+                background-color: white;
+                border: 10px solid $accent-color2;
+                border-left: none;
+                p{
+                    color: $accent-color2;
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+
+    .project__modal{
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+        .project__modal__content{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: $primary-color;
+            border: 10px solid $accent-color2;
+            width: 60%;
+            height: 80vh;
+            overflow-y: auto;
+
+            .project__modal__action-button{
+                margin: 1% 2%;
+                float: right;
+                display: block;
+                .modal__btn--close{
+                    color: $accent-color2;
+                    font-size: 1.5em;
+                }
+                .modal__btn--close:hover{
+                    color: $secondary-color;
+                    cursor: pointer;
+                } 
+            }
+            .project__modal__name{
+                margin-top: 2%;
+                margin-bottom: 4%;
+                .project__name{
+                    margin: 1% 2%;
+                    color: $accent-color;
+                    font-weight: 500;
+                    font-size:larger
+                }
+            }
+            .project__modal__images{
+                @include flex-center-row();
+                .project__image{
+                    width: 60%;
+                }
+            }
+            .project__modal__images__btn-container{
+                @include flex-center-row();
+                margin-top: 2%;
+                .images__btn{
+                    margin: 0px 0.5%;
+                }
+
+                .images__btn:disabled{
+                    background-color: $gray;
+                    cursor: default;
+                }
+                .images__btn:disabled:hover{
+                    filter: brightness(100%);
+                }
+            }
+            .project__modal__description{
+                color: $accent-color;
+            }
+        }
+    }
 }
 
 /* Animation */
@@ -298,83 +440,3 @@ body {
     from{border-right-color: $secondary-color;}
     to{border-right-color: transparent;}
   }
-
-.container-skills__skill {
-    width: 70%;
-    margin: 20px auto;
-
-    .skill__range{
-        width: 100%;
-        height: 5%;
-        accent-color: $secondary-color;
-    }
-    .container-skills__label{
-        display: block;
-        // text-align: center;
-    }
-    .container-skills__range{
-        width: 100%;
-
-        &:disabled{
-            // &::-webkit-slider-runnable-track{
-            //     // background: green;
-            // }
-            // &::-moz-range-track{
-            //     background-color: blue;
-            // }
-            // &::-webkit-slider-runnable-track{
-            //     background-color: pink;
-            // }
-        }
-    }
-    // input[type=range]:disabled {
-    // /* Disabled Element */
-    // background-color: aqua;
-    
-    // }
-
-    input[type=range]:disabled::-webkit-slider-runnable-track {
-        /* Disabled slider-runnable-track */
-        accent-color: blue;
-        background-color: pink;
-    }
-
-    // input[type=range]:disabled::-moz-range-track {
-    //     /* Disabled slider-range-track */
-    //     background-color: blue;
-    //     accent-color: blue;
-
-    // }
-
-    // input[type=range]:disabled::-webkit-slider-thumb {
-    //     /* Disabled slider-thumb */
-    //     background-color: black;
-    // }
-
-    // input[type=range]:disabled::-moz-range-thumb {
-    //     /* Disabled slider-thumb */
-    //     background-color: black;
-    //     // display: none;
-    // }
-    // input[type=range]:disabled::-ms-thumb {
-    //     /* Disabled slider-thumb */
-    //     background-color: black;
-    //     // display: none;
-    // }
-}
-datalist {
-    width: 121%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-datalist option {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-hsize: 0;
-}

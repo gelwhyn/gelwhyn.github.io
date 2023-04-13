@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
-    <link rel="stylesheet" media="screen and (max-width: 1440px)" href="css/smallscreen.css">
+    <link rel="stylesheet"  href="css/smallscreen.css">
     <link rel="stylesheet" media="screen and (min-width: 1440px)" href="css/styles.css">
     <script
       src="https://kit.fontawesome.com/9bbc10a37f.js"
@@ -20,19 +19,19 @@
       <div class="menu" id="menu">
         <a class="menu__item" id="menu__item__frontpage" href="#frontpage">
           <i
-            class="fa-solid fa-circle fa-sm fa-beat menu__item__icon menu__item--active"
+            class="fa-solid fa-circle fa-2xs fa-sm fa-beat menu__item__icon menu__item--active"
           ></i>
         </a>
         <a class="menu__item" id="menu__item__aboutme" href="#aboutme">
           <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
         </a>
-        <a class="menu__item" href="#skills">
+        <a class="menu__item" id="menu__item__skills" href="#skills">
           <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
         </a>
-        <a class="menu__item" href="#experience">
+        <a class="menu__item" id="menu__item__experience" href="#experience">
             <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
         </a>
-        <a class="menu__item" href="#projects">
+        <a class="menu__item" id="menu__item__projects" href="#projects">
           <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
       </a>
       </div>
@@ -47,7 +46,7 @@
             GELWHYN ABAD
           </h1>
           <p class="text--align-center">
-            Software Engineer | Lorem Ipsum | Lorem
+            Software Engineer | Developer | Intern
           </p>
         </div>
       </div>
@@ -84,6 +83,7 @@
             maxime quisquam, quaerat corrupti cumque laboriosam et eum! Dolorum,
             libero! Rem provident eligendi consectetur quos inventore numquam!
             Architecto voluptate temporibus deserunt.
+            <!-- Hi! I am Gelwhyn Abad (Gwen) a graduating software engineering student from iACADEMY. So far, I have experience as a developer and a quality assurance tester that I got from my internships. So far, I enjoy developing/programming and I want to pursue that as my main career. In addition, I also have experience in becoming a project team lead during the planning and development of my thesis project -->
           </p>
         </div>
         <div class="container-aboutme__interests-container">
@@ -95,15 +95,14 @@
             id="interests-container__icons"
           >
             <i
-              class="fa-sharp fa-solid fa-book-open-reader fa-3x interests-container__icon"
+              class="fa-sharp fa-solid fa-book-open-reader fa-3x interests-container__icon" interest="reading manhwa/webtoon"
             ></i>
-            <i class="fa-solid fa-gamepad fa-3x interests-container__icon"></i>
-            <i class="fa-solid fa-cat fa-3x interests-container__icon"></i>
-            <i
-              class="fa-solid fa-mobile-screen-button fa-3x interests-container__icon"
-            ></i>
-            <i class="fa-solid fa-file-pen fa-3x interests-container__icon"></i>
+            <i class="fa-solid fa-gamepad fa-3x interests-container__icon" interest="gaming"></i>
+            <i class="fa-solid fa-cat fa-3x interests-container__icon" interest="playing with my cats"></i>
+            <i class="fa-solid fa-mobile-screen-button fa-3x interests-container__icon" interest="using my phone"></i>
+            <i class="fa-solid fa-file-pen fa-3x interests-container__icon" interest="drawing"></i>
           </div>
+          <p class="container-aboutme__interests__label text--align-center" id="interestLabel"></p>
         </div>
         <div class="container-aboutme__download-button mt3">
           <a
@@ -198,55 +197,6 @@
             <p class="skill__label">Firebase</p>
           </div>
         </div>
-
-        <!-- <div class="container-skills__skill">
-          <label class="container-skills__label">CSS</label>
-          <div class="container-skills__range">
-            <div class="container-skills__range-level container-skills__range-level--intermediate">
-              <span class="container-skills__range-label">INTERMEDIATE</span>
-            </div>
-          </div>
-        </div>
-        <div class="container-skills__skill">
-          <label class="container-skills__label">Java</label>
-          <div class="container-skills__range">
-            <div class="container-skills__range-level container-skills__range-level--skilled">
-              <span class="container-skills__range-label">SKILLED</span>
-            </div>
-          </div>
-        </div>
-        <div class="container-skills__skill">
-          <label class="container-skills__label">Javascript</label>
-          <div class="container-skills__range">
-            <div class="container-skills__range-level container-skills__range-level--skilled">
-              <span class="container-skills__range-label">SKILLED</span>
-            </div>
-          </div>
-        </div>
-        <div class="container-skills__skill">
-          <label class="container-skills__label">C#</label>
-          <div class="container-skills__range">
-            <div class="container-skills__range-level container-skills__range-level--advanced">
-              <span class="container-skills__range-label">ADVANCED</span>
-            </div>
-          </div>
-        </div>
-        <div class="container-skills__skill">
-          <label class="container-skills__label">React</label>
-          <div class="container-skills__range">
-            <div class="container-skills__range-level container-skills__range-level--advanced">
-              <span class="container-skills__range-label">ADVANCED</span>
-            </div>
-          </div>
-        </div>
-        <div class="container-skills__skill">
-          <label class="container-skills__label">Java</label>
-          <div class="container-skills__range">
-            <div class="container-skills__range-level container-skills__range-level--intermediate">
-              <span class="container-skills__range-label">INTERMEDIATE</span>
-            </div>
-          </div>
-        </div> -->
       </div>
 
       <!-- Internship and Education -->
@@ -259,19 +209,29 @@
                     <h4 class="entries__header">EDUCATION</h6>
                 </div>
                 <div class="container-experience__entries__entry container-experience__entries__entry--left">
-                    <p class="entry__content entry__content--bold">2019-2023</p>
+                    <p class="entry__content entry__content--bold">2019 - Present</p>
                     <p class="entry__content my0">Bachelor of Science in Computer Science with
                         Major in Software Engineering</p>
-                    <p class="entry__content entry__content--bold my0">&nbsp;iACADEMY, Makati City</p>
-                    <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;——iACADEMY, Makati City</p>
+                    <p class="entry__content text--align-justify">
+                      Relevant Coursework: Object-Oriented Programming, Core and Enterprise Java, Data Structures and Algorithms, Software Design Patterns, Software Quality Assurance,
+                      Information Management and Database Systems, Unified Modelling Language
+                      <br/><br/>
+                      Current GWA Standing: 1.118/1.00
+                      <br/><br/>
+                      Achievements: Consistent Dean’s Lister for 9 consecutive terms and a LEAP20 Scholar of iACADEMY</p>
                 </div>
                 <div class="container-experience__entries__entry container-experience__entries__entry--left mt3">
-                    <p class="entry__content entry__content--bold">2017-2019</p>
+                    <p class="entry__content entry__content--bold">2017 - 2019</p>
                     <p class="entry__content my0">Senior Highschool - Computer Programming Strand</p>
-                    <p class="entry__content entry__content--bold my0">&nbsp;iACADEMY, Makati City</p>
-                    <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;——iACADEMY, Makati City</p>
+                    <p class="entry__content text--align-justify">
+                      Relevant Coursework: Fundamentals of Programming, Database Management Programming, Object-Oriented Programming, Web Programming
+                      <br/><br/>
+                      Final Grade: 94-96
+                      <br/><br/>
+                      Achievements: Graduated with High Honors and received a scholarship discount contract from iACADEMY
+                    </p>
                 </div>
             </div>
             <div class="container-experience__entries--right">
@@ -282,16 +242,20 @@
                 <div class="container-experience__entries__entry container-experience__entries__entry--right">
                     <p class="entry__content entry__content--bold">January 2023 – April 2023</p>
                     <p class="entry__content my0">Digital Specialist Intern</p>
-                    <p class="entry__content entry__content--bold my0">&nbsp;Datawords Philippines, Makati City</p>
+                    <p class="entry__content entry__content--bold my0">&nbsp;——Datawords Philippines, Makati City</p>
                     <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                         ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div class="container-experience__entries__entry container-experience__entries__entry--right mt3">
                   <p class="entry__content entry__content--bold">August 2022 – November 2022</p>
-                  <p class="entry__content my0">Quality Assurance Intern</p>
-                  <p class="entry__content entry__content--bold my0">&nbsp;Infor PSSC Inc., Taguig City</p>
-                  <p class="entry__content text--align-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p class="entry__content my0">Quality Assurance Intern (with some development tasks)</p>
+                  <p class="entry__content entry__content--bold my0">&nbsp;——Infor PSSC Inc., Taguig City</p>
+                  <p class="entry__content text--align-justify">
+                    Quality Assurance Intern: Test Case Replication, Validation, Update, and Creation
+                    <br/><br/>
+                    Developer Tasks: A solo project wherein I developed a C# standalone windows form application to automate comparison of JIRA Ticket List excel sheets needed by the Quality Assurance Team to track the tickets needed for
+                    the current sprint.
+                  </p>
                 </div>
             </div>
         </div>
@@ -306,8 +270,7 @@
               <img src="img/cmon.png" class="project__image"/>
             </div>
             <div class="project__description">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nam saepe obcaecati expedita minima quae nisi voluptas 
-                libero aut nemo perspiciatis voluptatum</p>
+              <p class="project__description__text">CMON is a web based application that will automate the process of requesting barangay clearances and certifications. CMON can be customized (color theme, logos, forms, etc.) according to what the barangay needs.</p>
             </div>
           </div>
           <div class="container-projects__project mt3" id="modernfix">
@@ -315,8 +278,7 @@
               <img src="img/modernfix.png" class="project__image"/>
             </div>
             <div class="project__description">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nam saepe obcaecati expedita minima quae nisi voluptas 
-                libero aut nemo perspiciatis voluptatum</p>
+              <p class="project__description__text">ModernFix is a local-web based application which addresses the problem of our client, Cholula. This application is a mix of a POS and Inventory system, when an order is inputted in the system, the application automatically deducts the ingredient inventory. Moreover, it can also generate sales and inventory reports which can be helpful for the client.</p>
             </div>
           </div>
         </div>
@@ -326,28 +288,26 @@
               <img src="img/trace.png" class="project__image"/>
             </div>
             <div class="project__description">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nam saepe obcaecati expedita minima quae nisi voluptas 
-                libero aut nemo perspiciatis voluptatum</p>
+              <p class="project__description__text">Trace is a windows standalone application developed to address the process efficiency problem experienced by the L&D QA Team at Infor.
+                Trace automatically compares two excel sheets containing JIRA QA Ticket lists (generated from JIRA). The application generates a new excel sheet that uses color coding to represent tickets that were retained/added/deleted/closed.</p>
             </div>
           </div>
         </div>
       </div>
       </div>
-
+      <!-- Project Modal (More Info) -->
       <div class="project__modal" id="modal">
         <div class="project__modal__content">
           <div class="project__modal__action-button">
-            <a class="modal__btn--close" id="modalClose"><i class="fa-solid fa-circle-xmark"></i></a>
+            <a class="modal__btn--close" id="modalClose"><i class="fa-solid fa-circle-xmark fa-1x"></i></a>
           </div>
           <div class="project__modal__name" id="projectName">
-            <!-- <h4 class="project__name">something</h4> -->
           </div>
           <div class="project__modal__images" id="projectImages">
-            <!-- carousel? -->
           </div>
-          <div class="project__modal__images__btn-container">
-            <button onclick="" class="button images__btn" id="previous"><i class="fa-solid fa-arrow-left"></i></button>
-            <button onclick="" class="button images__btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+          <div class="project__modal__images__btn-container" id="imageButtons">
+            <button class="button images__btn" id="previous"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="button images__btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
           <div class="project__modal__description">
             <ul id="projectDescription">
@@ -359,5 +319,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-
-<!-- gawa isang modal then change values nalang sa js depending on what project was selected (addeventlistener) -->
