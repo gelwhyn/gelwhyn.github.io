@@ -236,6 +236,12 @@ body .container-skills .container-skills__skills .container-skills__skill .conta
   border: 8px solid #7892B5;
   color: #7892B5;
 }
+body .container-skills .container-skills__skills .container-skills__skill .skill__icon {
+  font-size: 4vw;
+}
+body .container-skills .container-skills__skills .container-skills__skill .skill__icon--extra {
+  font-size: 0.8vw;
+}
 body .container-experience {
   margin-top: 5%;
   display: flex;
@@ -462,11 +468,69 @@ body .anim-typewriter {
 }
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
-  body .container-skills__skill .skill__icon {
-    font-size: 1.2em;
+  body .container-aboutme .container-aboutme__image-container {
+    float: left;
+    width: 45%;
+    height: 100%;
+    margin-left: 0px;
   }
-  body .container-skills__skill .skill__icon--extra {
-    font-size: 0.7em;
+  body .container-aboutme .container-aboutme__image-container .container-aboutme__image-container__image {
+    float: right;
+    width: 70%;
+    right: 0;
+    margin-right: 0px;
+  }
+  body .container-aboutme .container-aboutme__info-container {
+    width: 45%;
+    margin-right: 2%;
+    word-break: break-all;
+  }
+  body .container-aboutme .container-aboutme__interests-container .container-aboutme__interests-container__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0;
+  }
+  body .container-aboutme .container-aboutme__interests-container .interests-container__icon {
+    padding: 3% 5%;
+    color: #91B5A9;
+    font-size: 2em;
+  }
+  body .container-aboutme .container-aboutme__download-button {
+    margin-top: 5%;
+  }
+  body .container-skills {
+    margin-top: 15%;
+  }
+  body .container-skills .container-skills__skills {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill {
+    width: 30%;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .skill__icon {
+    font-size: 5vw;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .skill__icon--extra {
+    font-size: 2vw;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .container-skills__icon-container {
+    width: 15vw;
+    height: 15vw;
+  }
+  body .container-skills .container-skills__skills .container-skills__skill .container-skills__icon-container:hover {
+    border: 7px solid #7892B5;
+  }
+  body .container-experience {
+    margin-top: 15%;
+  }
+  body .container-experience .container-experience__header {
+    font-size: 10vw;
   }
   body .container-experience .container-experience__entries {
     width: 100%;
@@ -502,22 +566,43 @@ body .anim-typewriter {
     flex-direction: column;
   }
   body .container-projects .container-projects__project {
-    width: 70%;
+    width: 80%;
+  }
+  body .container-projects .container-projects__project .project__image-container {
+    width: 40%;
+    border: 8px solid #91B5A9;
+    border-right: none;
   }
   body .container-projects .container-projects__project .project__description {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     background-color: #91B5A9;
-    padding: 1vw;
+    padding: 0.5vw 3vw;
   }
   body .container-projects .container-projects__project .project__description .project__description__text {
     color: white;
     font-size: 2vw;
   }
+  body .container-projects .container-projects__project:hover .project__description {
+    border: 8px solid #91B5A9;
+    border-left: none;
+  }
   body .project__modal .project__modal__content {
     width: 80%;
+  }
+  body .project__modal .project__modal__content .project__modal__images {
+    margin-bottom: 5vw;
+  }
+  body .project__modal .project__modal__content .project__modal__images .project__image {
+    width: 80%;
+  }
+  body .project__modal .project__modal__content .project__modal__name {
+    margin: 3vw 5vw;
+  }
+  body .project__modal .project__modal__content .project__modal__description {
+    margin: 2vw;
   }
 }/*# sourceMappingURL=smallscreen.css.map */

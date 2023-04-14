@@ -3,8 +3,6 @@
 @import 'variables';
 @import 'mixins';
 
-
-
 * {
     box-sizing: border-box;
 }
@@ -235,6 +233,12 @@ body {
                     background-color: $primary-color;
                     border: 8px solid $accent-color;
                     color: $accent-color;
+                }
+                .skill__icon{
+                    font-size: 4vw;
+                }
+                .skill__icon--extra{
+                    font-size: 0.8vw;
                 }
                 // @media screen and (max-width: 1050px) and (min-width: 600px) {
                 //     .skill__icon{
@@ -470,16 +474,76 @@ body {
         // background-color: #8CB9C0;
     }
     body{
-        .container-skills__skill{
-            .skill__icon{
-                font-size: 1.2em;
+
+        .container-aboutme{
+            .container-aboutme__image-container{
+                float: left;
+                width: 45%;
+                height: 100%;
+                margin-left: 0px;
+    
+                .container-aboutme__image-container__image{
+                    float: right;
+                    width: 70%;
+                    right: 0;
+                    margin-right: 0px;
+                }
             }
-            .skill__icon--extra{
-                font-size: 0.7em;
+            .container-aboutme__info-container{
+                width: 45%;
+                margin-right: 2%;
+                word-break: break-all;
+            }
+            .container-aboutme__interests-container{
+                .container-aboutme__interests-container__icons{
+                    @include flex-center-row();
+                    width: 100%;
+                    margin-top:0;
+                }
+                .interests-container__icon{
+                    padding: 3% 5%;
+                    color: $accent-color2;
+                    font-size: 2em;
+                }
+            }
+            .container-aboutme__download-button{
+                margin-top: 5%;
+            }
+        }
+
+        .container-skills{
+            margin-top: 15%;
+            .container-skills__skills{
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .container-skills__skill{
+                    width: 30%;
+                    // display: block;
+                    .skill__icon{
+                        font-size: 5vw;
+                    }
+                    .skill__icon--extra{
+                        font-size: 2vw;
+                    }
+                    .container-skills__icon-container {
+                        width: 15vw;
+                        height: 15vw;
+                    }
+                    .container-skills__icon-container:hover{
+                        border: 7px solid $accent-color;
+                    }
+                }
             }
         }
     
         .container-experience{
+            margin-top: 15%;
+            .container-experience__header{
+                font-size: 10vw;
+            }
             .container-experience__entries{
                 width: 100%;
                 .container-experience__entries--left{
@@ -508,13 +572,19 @@ body {
                 @include flex-center();
             }
             .container-projects__project{
-                width: 70%;
+                width: 80%;
+
+                .project__image-container{
+                    width: 40%;
+                    border: 8px solid $accent-color2;
+                    border-right: none;
+                }
 
                 .project__description{
                     @include flex-center();
-                    width: 70%;
+                    width: 60%;
                     background-color: $accent-color2;
-                    padding: 1vw;
+                    padding: 0.5vw 3vw;
                     
                     .project__description__text{
                         color: white;
@@ -522,10 +592,30 @@ body {
                     }
                 }
             }
+            .container-projects__project:hover{
+                .project__description{
+                    border: 8px solid $accent-color2;
+                    border-left: none;
+                }
+            }
         }
         .project__modal{
             .project__modal__content{
                 width: 80%;
+
+                .project__modal__images{
+                    margin-bottom: 5vw;
+                    .project__image{
+                        width: 80%;
+                    }
+                }
+
+                .project__modal__name{
+                    margin: 3vw 5vw;
+                }
+                .project__modal__description{
+                    margin: 2vw;
+                }
             }
         }
     }
