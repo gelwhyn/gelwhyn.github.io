@@ -203,3 +203,11 @@ for (let i = 0; i < imageArrowKeys.length; i++) {
 }
 
 //Experience -- overflow text
+var experienceDetailsContainer = document.getElementsByClassName(".entry__content__container")
+
+//onload event?
+for(let i = 0; i < experienceDetailsContainer.length; i++){
+  if(experienceDetailsContainer[i].style){
+
+  }
+}
