@@ -92,7 +92,7 @@ var modalContent = {
   },
   trace:{
     name: "Trace - Solo Project",
-    images: ["../img/cmon/cmon1.PNG"], //to be updated - image placeholder only
+    images: ["../img/trace/trace1.PNG", "../img/trace/trace2.PNG", "../img/trace/trace3.PNG", "../img/trace/trace4.PNG"],
     details: [
       "A solo project given during my first internship at Infor PSSC Inc.",
       "Automates the comparison of JIRA Ticket List excel sheets needed by the Quality Assurance Team to track the tickets needed for the current sprint.",
@@ -101,7 +101,7 @@ var modalContent = {
   },
   modernfix:{
     name: "ModernFix - Team Project (Mini Thesis)",
-    images: ["../img/modernfix/modernfix1.jpg", "../img/modernfix/modernfix2.jpg", "../img/firebase.png", "../img/mysql.png"], //to be updated - image placeholder only
+    images: ["../img/modernfix/modernfix1.jpg", "../img/modernfix/modernfix2.jpg"],
     details: [
       "A local web-based application that helps small business owners in digitally managing their business. The application is a combination of a POS system and Inventory system catered to the owner and business employees.",
       "Participated in the development of ModernFix through backend programming and base frontend styling",
@@ -201,3 +201,5 @@ for (let i = 0; i < imageArrowKeys.length; i++) {
     }
   })
 }
+
+//Experience -- overflow text

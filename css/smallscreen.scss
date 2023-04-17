@@ -29,13 +29,15 @@ html{
     }
 
 }
-
+  
 body {
+    
     @include default-spacing();
     font-family: $fonts; /* variable usage */
     width:100%;
     min-height: 100vh;
     height: 100vh;
+    
     p{
         font-family: $fonts;
         font-weight: 400;
@@ -240,14 +242,6 @@ body {
                 .skill__icon--extra{
                     font-size: 0.8vw;
                 }
-                // @media screen and (max-width: 1050px) and (min-width: 600px) {
-                //     .skill__icon{
-                //         font-size: 2em;
-                //     }
-                //     .skill__icon--extra{
-                //         font-size: 0.8em;
-                //     }
-                // }
             }
         }
     }
@@ -289,6 +283,7 @@ body {
             .container-experience__entries__entry{
                 background-color: $accent-color;
                 width: 70%;
+                // height: 200px;
                 padding: 1% 3%;
                 margin-top: 2vw;
                 // padding: 3%;
@@ -300,6 +295,27 @@ body {
                 .entry__content--bold{
                     font-weight: 500;
                 }
+                .entry__content__container::-webkit-scrollbar {
+                    width: 0.2em;
+                  }
+                   
+                  .entry__content__container::-webkit-scrollbar-track {
+                    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                  }
+                   
+                  .entry__content__container::-webkit-scrollbar-thumb {
+                    background-color: $gray;
+                  }
+                .entry__content__container{
+                        overflow: auto;
+                        margin-top: 0.5vw;
+                        margin-bottom: 0.5vw;
+
+                        .entry__content__details{
+                            text-align: start;
+                            overflow: auto;
+                        }
+                    }
             }
             .container-experience__entries__entry--left{
                 box-shadow: -10px -10px #8CB9C0;
@@ -469,13 +485,17 @@ body {
 
 //WIP
 @media screen and (min-width: 300px) and (max-width: 800px) {
-
-    *{
-        // background-color: #8CB9C0;
-    }
     body{
 
+        .menu{
+            margin-right: 1%;
+        }
+
         .container-aboutme{
+            .container-aboutme__grid{
+                // display: flex;
+                @include flex-center-row();
+            }
             .container-aboutme__image-container{
                 float: left;
                 width: 45%;
@@ -484,9 +504,9 @@ body {
     
                 .container-aboutme__image-container__image{
                     float: right;
-                    width: 70%;
+                    width: 80%;
                     right: 0;
-                    margin-right: 0px;
+                    margin-right: 5vw;
                 }
             }
             .container-aboutme__info-container{
@@ -556,6 +576,21 @@ body {
                 }
                 .container-experience__entries__entry{
                     margin-bottom: 2vw;
+
+                    .entry__content__container{
+                        height: 90vw;
+                        overflow: auto;
+                        margin-top: 2vw;
+                        margin-bottom: 4vw;
+
+                        .entry__content__details{
+                            padding-top: 1%;
+                            text-align: start;
+                            height: 100vw;
+                            overflow: auto;
+                            margin-top: 2vw;
+                        }
+                    }
                 }
             }
         }

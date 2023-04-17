@@ -297,6 +297,24 @@ body .container-experience .container-experience__entries .container-experience_
 body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content--bold {
   font-weight: 500;
 }
+body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container::-webkit-scrollbar {
+  width: 0.2em;
+}
+body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+}
+body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container {
+  overflow: auto;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container .entry__content__details {
+  text-align: start;
+  overflow: auto;
+}
 body .container-experience .container-experience__entries .container-experience__entries__entry--left {
   box-shadow: -10px -10px #8CB9C0;
 }
@@ -468,6 +486,15 @@ body .anim-typewriter {
 }
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
+  body .menu {
+    margin-right: 1%;
+  }
+  body .container-aboutme .container-aboutme__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
   body .container-aboutme .container-aboutme__image-container {
     float: left;
     width: 45%;
@@ -476,9 +503,9 @@ body .anim-typewriter {
   }
   body .container-aboutme .container-aboutme__image-container .container-aboutme__image-container__image {
     float: right;
-    width: 70%;
+    width: 80%;
     right: 0;
-    margin-right: 0px;
+    margin-right: 5vw;
   }
   body .container-aboutme .container-aboutme__info-container {
     width: 45%;
@@ -551,6 +578,19 @@ body .anim-typewriter {
   }
   body .container-experience .container-experience__entries .container-experience__entries__entry {
     margin-bottom: 2vw;
+  }
+  body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container {
+    height: 90vw;
+    overflow: auto;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+  }
+  body .container-experience .container-experience__entries .container-experience__entries__entry .entry__content__container .entry__content__details {
+    padding-top: 1%;
+    text-align: start;
+    height: 100vw;
+    overflow: auto;
+    margin-top: 2vw;
   }
   body .container-projects .container-projects__entries {
     display: block;
