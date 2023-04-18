@@ -117,7 +117,9 @@ body .container-frontpage .container-frontpage__content__social-buttons {
   padding: 0;
 }
 body .container-frontpage .container-frontpage__content__social-buttons .social-buttons__btn {
-  margin: 0px 2%;
+  margin: 0px 0px;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
   padding: 0px;
   color: #7892B5;
 }
@@ -509,6 +511,11 @@ body .anim-typewriter {
   }
   body .container__header {
     font-size: 200%;
+  }
+  body .container-frontpage .container-frontpage__content__social-buttons .social-buttons__btn {
+    margin: 0px 2%;
+    padding: 0px;
+    color: #7892B5;
   }
   body .container-aboutme .container-aboutme__grid {
     display: flex;

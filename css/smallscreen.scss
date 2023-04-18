@@ -118,7 +118,9 @@ body {
             @include flex-center-row();
             @include default-spacing();
             .social-buttons__btn{
-                margin: 0px 2%;
+                margin: 0px 0px;
+                margin-right: 0.5%;
+                margin-left: 0.5%;
                 padding: 0px;
                 color: $accent-color;
             }
@@ -506,6 +508,16 @@ body {
 
         .container__header{
             font-size: 200%;
+        }
+
+        .container-frontpage{
+            .container-frontpage__content__social-buttons{
+                .social-buttons__btn{
+                    margin: 0px 2%;
+                    padding: 0px;
+                    color: $accent-color;
+                }
+            }
         }
 
         .container-aboutme{
