@@ -92,7 +92,7 @@ var modalContent = {
   },
   trace:{
     name: "Trace - Solo Project",
-    images: ["../img/trace/trace1.PNG", "../img/trace/trace2.PNG", "../img/trace/trace3.PNG", "../img/trace/trace4.PNG"],
+    images: ["../img/trace/trace1.png", "../img/trace/trace2.png", "../img/trace/trace3.png", "../img/trace/trace4.png"],
     details: [
       "A solo project given during my first internship at Infor PSSC Inc.",
       "Automates the comparison of JIRA Ticket List excel sheets needed by the Quality Assurance Team to track the tickets needed for the current sprint.",
@@ -200,14 +200,4 @@ for (let i = 0; i < imageArrowKeys.length; i++) {
       }
     }
   })
-}
-
-//Experience -- overflow text
-var experienceDetailsContainer = document.getElementsByClassName(".entry__content__container")
-
-//onload event?
-for(let i = 0; i < experienceDetailsContainer.length; i++){
-  if(experienceDetailsContainer[i].style){
-
-  }
 }

@@ -108,6 +108,19 @@ body .container-frontpage .container-frontpage__content-header {
   font-weight: 600;
   color: #D98481;
 }
+body .container-frontpage .container-frontpage__content__social-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+body .container-frontpage .container-frontpage__content__social-buttons .social-buttons__btn {
+  margin: 0px 2%;
+  padding: 0px;
+  color: #7892B5;
+}
 body .container-aboutme {
   margin: 0;
   padding: 0;
@@ -186,7 +199,7 @@ body .container-aboutme .container-aboutme__download-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 1%;
   margin: 1%;
 }
@@ -467,6 +480,9 @@ body .project__modal .project__modal__content .project__modal__images__btn-conta
 body .project__modal .project__modal__content .project__modal__description {
   color: #7892B5;
 }
+body #modal {
+  visibility: hidden;
+}
 body .anim-typewriter {
   animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
@@ -490,6 +506,9 @@ body .anim-typewriter {
 @media screen and (min-width: 300px) and (max-width: 800px) {
   body .menu {
     margin-right: 1%;
+  }
+  body .container__header {
+    font-size: 200%;
   }
   body .container-aboutme .container-aboutme__grid {
     display: flex;
@@ -557,9 +576,6 @@ body .anim-typewriter {
   }
   body .container-experience {
     margin-top: 15%;
-  }
-  body .container-experience .container-experience__header {
-    font-size: 10vw;
   }
   body .container-experience .container-experience__entries {
     width: 100%;

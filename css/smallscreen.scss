@@ -114,6 +114,15 @@ body {
             font-weight: 600;
             color: $secondary-color;
         }
+        .container-frontpage__content__social-buttons{
+            @include flex-center-row();
+            @include default-spacing();
+            .social-buttons__btn{
+                margin: 0px 2%;
+                padding: 0px;
+                color: $accent-color;
+            }
+        }
     }
 
     .container-aboutme{
@@ -187,7 +196,7 @@ body {
         }
 
         .container-aboutme__download-button{
-            @include flex-center();
+            @include flex-center-row();
             padding-top: 1%;
             margin: 1%;
         }
@@ -468,6 +477,10 @@ body {
         }
     }
 
+    #modal{
+        visibility: hidden;
+    }
+
 /* Animation */
 .anim-typewriter{
     animation: typewriter 4s steps(44) 1s 1 normal both,
@@ -484,12 +497,15 @@ body {
 
 }
 
-//WIP
 @media screen and (min-width: 300px) and (max-width: 800px) {
     body{
 
         .menu{
             margin-right: 1%;
+        }
+
+        .container__header{
+            font-size: 200%;
         }
 
         .container-aboutme{
@@ -563,7 +579,7 @@ body {
         .container-experience{
             margin-top: 15%;
             .container-experience__header{
-                font-size: 10vw;
+                // font-size: 300%;
             }
             .container-experience__entries{
                 width: 100%;
