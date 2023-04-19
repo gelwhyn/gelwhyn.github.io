@@ -125,6 +125,22 @@ body {
                 color: $accent-color;
             }
         }
+        .frontpage__scroll__container{
+            bottom:0;
+            position: absolute;
+            margin-bottom: 4%;
+            --fa-beat-fade-opacity: 0.67;
+            --fa-beat-fade-scale: 1.05;
+            --fa-animation-duration: 2s;
+            .scroll__redirect{
+                color: $secondary-color;
+                text-decoration: none;
+            }
+            .scroll__indicator{
+                bottom: 0;
+                margin-bottom: 3vw;
+            }
+        }
     }
 
     .container-aboutme{
@@ -135,17 +151,30 @@ body {
         .container-aboutme__grid{
             margin-top: 2vw;
             margin-bottom: 2vw;
-
+            @include flex-center-row();
+        }
+        .container-aboutme__grid--left{
+            float: left;
+            width: 40%;
+            border-right: 2px dotted $secondary-color;
+            @include flex-center();
+            text-align: center;
+        }
+        .container-aboutme__grid--right{
+            float: right;
+            width: 70%;
+            @include flex-center();
+            // border-left: 2px dotted $secondary-color;
         }
         .container-aboutme__image-container{
             float: left;
             width: 50%;
 
             .container-aboutme__image-container__image{
-                float: right;
+                // float: right;
                 width: 50%;
                 border-radius: 60%;
-                margin-right: 5%;
+                // margin-right: 5%;
                 padding: 3px;
                 border: 2px dotted $accent-color2;
                 box-shadow: 0 0 0 7px #fff, 
@@ -160,16 +189,16 @@ body {
             .container-aboutme__info-container__header{
                 color: $accent-color2;
                 margin-bottom: 0%;
+                font-weight: bold;
             }
             .container-aboutme__info-container__content{
-                font-size: large;
                 color: $accent-color;
                 margin-top: 0;
             }
         }
         .container-aboutme__more-info-container{
             @include flex-center();
-            padding: 1vw 10vw;
+            padding: 1vw 2vw;
             width: 100%;
             display: flex;
             
@@ -189,11 +218,14 @@ body {
                 margin-top:0;
             }
             .interests-container__icon{
-                padding: 3% 5%;
+                padding: 3% 2%;
                 color: $accent-color2;
+                font-size: 3vw;
             }
             .container-aboutme__interests__label{
                 margin: 0px;
+                padding: 1px;
+                height: 15px;
             }
         }
 
@@ -340,12 +372,20 @@ body {
 
     .container-projects{
         margin-top: 5%;
-        @include flex-center();
+        // @include flex-center();
         color: $secondary-color;
+        width: 100%;
 
+        .carousel__control{
+            color: $secondary-color;
+        }
 
+        .carousel-inner{
+            margin: auto;
+        }
         .container-projects__entries{
             display: flex;
+            
             margin: 5%;
             margin-top: 2%;
         }
@@ -361,7 +401,7 @@ body {
             margin-left: 1%;
         }
         .container-projects__project{
-            width: 100%;
+            width: 60%;
             display: flex;
             direction: row;
             margin: 1%;
@@ -483,6 +523,18 @@ body {
         visibility: hidden;
     }
 
+    .footer{
+        bottom:0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: 1vw;
+        padding: 1vw 2vw;
+        text-align: center;
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+
 /* Animation */
 .anim-typewriter{
     animation: typewriter 4s steps(44) 1s 1 normal both,
@@ -522,8 +574,18 @@ body {
 
         .container-aboutme{
             .container-aboutme__grid{
-                // display: flex;
-                @include flex-center-row();
+                display: flex;
+                flex-direction: column;
+                // @include flex-center-row();
+
+            }
+            .container-aboutme__grid--left{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+            .container-aboutme__grid--right{
+                width: 100%;
             }
             .container-aboutme__image-container{
                 float: left;
@@ -542,6 +604,8 @@ body {
                 width: 45%;
                 margin-right: 2%;
                 word-break: break-all;
+                float: right;
+                text-align: left;
             }
             .container-aboutme__interests-container{
                 .container-aboutme__interests-container__icons{

@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"  href="css/smallscreen.css">
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/> -->
     <!-- <link rel="stylesheet" media="screen and (min-width: 1440px)" href="css/styles.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/9bbc10a37f.js"
       crossorigin="anonymous"
@@ -46,7 +51,7 @@
             GELWHYN ABAD
           </h1>
           <p class="text--align-center container-frontpage__roles">
-            Software Engineer | Developer | Intern
+            Software Engineer | Web Developer
           </p>
           <div class="container-frontpage__content__social-buttons">
             <a
@@ -58,76 +63,86 @@
             <a class="social-buttons__btn" href="mailto:abadgelwhyn@gmail.com"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
+        <div class="frontpage__scroll__container fa-beat-fade">
+          <a class="scroll__redirect" href="#aboutme">
+            <i class="fas fa-angle-double-down scroll__indicator"></i>
+            SCROLL
+            <i class="fas fa-angle-double-down scroll__indicator"></i>
+          </a>
+        </div>
       </div>
 
       <!-- About Me -->
       <div class="container container-aboutme" id="aboutme">
         <h2 class="container__header container-aboutme__header">ABOUT ME</h2>
         <div class="container-aboutme__grid">
-          <div class="container-aboutme__image-container">
-            <img
-              class="container-aboutme__image-container__image"
-              alt="profile"
-              src="img/gwen-bluebg.png"
-            />
-          </div>
-          <div class="container-aboutme__info-container">
-            <h3 class="container-aboutme__info-container__header">Full Name</h3>
-            <p class="container-aboutme__info-container__content">
-              Gelwhyn Abad
-            </p>
+          <div class="container-aboutme__grid--left">
+            <div class="container-aboutme__image-container">
+              <img
+                class="container-aboutme__image-container__image"
+                alt="profile"
+                src="img/gwen-bluebg.png"
+              />
+            </div>
+            <div class="container-aboutme__info-container">
+              <p class="container-aboutme__info-container__header">Full Name</p>
+              <p class="container-aboutme__info-container__content">
+                Gelwhyn Abad
+              </p>
 
-            <h3 class="container-aboutme__info-container__header">Nickname</h3>
-            <p class="container-aboutme__info-container__content">Gwen</p>
+              <p class="container-aboutme__info-container__header">Nickname</p>
+              <p class="container-aboutme__info-container__content">Gwen</p>
 
-            <h3 class="container-aboutme__info-container__header">Phone Number</h3>
-            <p class="container-aboutme__info-container__content">
-              0956 993 6419
-            </p>
+              <p class="container-aboutme__info-container__header">Phone Number</p>
+              <p class="container-aboutme__info-container__content">
+                0956 993 6419
+              </p>
 
-            <h3 class="container-aboutme__info-container__header">Email</h3>
-            <p class="container-aboutme__info-container__content">
-              abadgelwhyn@gmail.com
+              <p class="container-aboutme__info-container__header">Email</p>
+              <p class="container-aboutme__info-container__content">
+                abadgelwhyn@gmail.com
+              </p>
+            </div>
+          </div>
+        <div class="container-aboutme__grid--right">
+          <div class="container-aboutme__more-info-container">
+            <p class="text--align-center more-info-container__text">
+              Hi! I am Gelwhyn Abad, a graduating software engineering student from iACADEMY. I have experience as a developer and a quality assurance tester that I got from my internships. So far, I enjoy being a developer and I want to pursue that as my main career.
             </p>
           </div>
-        </div>
-        <div class="container-aboutme__more-info-container">
-          <p class="text--align-center more-info-container__text">
-            Hi! I am Gelwhyn Abad, a graduating software engineering student from iACADEMY. I have experience as a developer and a quality assurance tester that I got from my internships. So far, I enjoy being a developer and I want to pursue that as my main career.
-          </p>
-        </div>
-        <div class="container-aboutme__interests-container">
-          <h3 class="container-aboutme__interests-container__header">
-            My Interests
-          </h3>
-          <div
-            class="container-aboutme__interests-container__icons"
-            id="interests-container__icons"
-          >
-            <i
-              class="fa-sharp fa-solid fa-book-open-reader fa-3x interests-container__icon" interest="reading manhwa/webtoon"
-            ></i>
-            <i class="fa-solid fa-gamepad fa-3x interests-container__icon" interest="gaming"></i>
-            <i class="fa-solid fa-cat fa-3x interests-container__icon" interest="playing with my cats"></i>
-            <i class="fa-solid fa-mobile-screen-button fa-3x interests-container__icon" interest="using my phone"></i>
-            <i class="fa-solid fa-file-pen fa-3x interests-container__icon" interest="drawing"></i>
+          <div class="container-aboutme__interests-container">
+            <h3 class="container-aboutme__interests-container__header">
+              My Interests
+            </h3>
+            <div
+              class="container-aboutme__interests-container__icons"
+              id="interests-container__icons"
+            >
+              <i
+                class="fa-sharp fa-solid fa-book-open-reader fa-3x interests-container__icon" interest="reading manhwa/webtoon"
+              ></i>
+              <i class="fa-solid fa-gamepad fa-3x interests-container__icon" interest="gaming"></i>
+              <i class="fa-solid fa-cat fa-3x interests-container__icon" interest="playing with my cats"></i>
+              <i class="fa-solid fa-mobile-screen-button fa-3x interests-container__icon" interest="using my phone"></i>
+              <i class="fa-solid fa-file-pen fa-3x interests-container__icon" interest="drawing"></i>
+            </div>
+            <div class="container-aboutme__interests__label text--align-center" id="interestLabel"></div>
           </div>
-          <p class="container-aboutme__interests__label text--align-center" id="interestLabel"></p>
-        </div>
-        <div class="container-aboutme__download-button mt3">
-          <a
-            class="button aboutme__btn-download"
-            href="https://drive.google.com/file/d/1D0jd5wZo2tQhC_IvZcqcDnuLKT_j7WdC/view?usp=sharing"
-            target="_blank"
-            download
-            >View and Download My Resume</a
-          >
+          <div class="container-aboutme__download-button mt3">
+            <a
+              class="button aboutme__btn-download"
+              href="https://drive.google.com/file/d/1D0jd5wZo2tQhC_IvZcqcDnuLKT_j7WdC/view?usp=sharing"
+              target="_blank"
+              download
+              >View and Download My Resume</a
+            >
+          </div>
         </div>
       </div>
 
       <!-- Skills -->
       <div class="container container-skills mt3" id="skills">
-        <h3 class="container__header container-skills__header">MY SKILLS</h3>
+        <h3 class="container__header container-skills__header">MY TECH STACK</h3>
         <div class="container-skills__skills">
           <div class="container-skills__skill">
             <div class="container-skills__icon-container">
@@ -211,7 +226,7 @@
 
       <!-- Internship and Education -->
       <div class="container container-experience mt3" id="experience">
-        <h3 class="container__header container-experience__header">EDUCATION AND INTERNSHIP EXPERIENCE</h3>
+        <h3 class="container__header container-experience__header">EDUCATION AND WORK EXPERIENCE</h3>
         <div class="container-experience__entries">
             <div class="container-experience__entries container-experience__entries--left">
                 <div class="container-experience__entries__header">
@@ -252,7 +267,7 @@
             <div class="container-experience__entries--right">
                 <div class="container-experience__entries__header">
                     <i class="fa-solid fa-briefcase fa-lg entries__icon"></i>
-                    <h4 class="entries__header">INTERNSHIP</h6>
+                    <h4 class="entries__header">WORK</h6>
                 </div>
                 <div class="container-experience__entries__entry container-experience__entries__entry--right">
                   <div class="entry__content__header-container">
@@ -288,40 +303,54 @@
         </div>
       </div>
       <!-- Projects -->
-      <div class="container container-projects mt3" id="projects">
+      <!-- <div class="container container-projects mt3" id="projects">
         <h3 class="container__header container-projects__header">PROJECTS</h3>
         <div class="container-projects__entries">
-        <div class="container-projects__entries--left">
-          <div class="container-projects__project" id="cmon">
-            <div class="project__image-container">
-              <img src="img/cmon.png" class="project__image"/>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container-projects__project" id="cmon">
+                  <div class="project__image-container">
+                    <img src="img/cmon.png" class="project__image"/>
+                  </div>
+                  <div class="project__description">
+                    <p class="project__description__text">CMON is a web based application that will automate the process of requesting barangay clearances and certifications. CMON can be customized (color theme, logos, forms, etc.) according to what the barangay needs.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container-projects__project mt3" id="modernfix">
+                  <div class="project__image-container">
+                    <img src="img/modernfix.png" class="project__image"/>
+                  </div>
+                  <div class="project__description">
+                    <p class="project__description__text">ModernFix is a local-web based application which addresses the problem of our client, Cholula. This application is a mix of a POS and Inventory system, when an order is inputted in the system, the application automatically deducts the ingredient inventory. Moreover, it can also generate sales and inventory reports which can be helpful for the client.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="container-projects__project" id="trace">
+                    <div class="project__image-container">
+                      <img src="img/trace.png" class="project__image"/>
+                    </div>
+                    <div class="project__description">
+                      <p class="project__description__text">Trace is a windows standalone application developed to address the process efficiency problem experienced by the L&D QA Team at Infor.
+                        Trace automatically compares two excel sheets containing JIRA QA Ticket lists (generated from JIRA). The application generates a new excel sheet that uses color coding to represent tickets that were retained/added/deleted/closed.</p>
+                    </div>
+                  </div>
+              </div>
             </div>
-            <div class="project__description">
-              <p class="project__description__text">CMON is a web based application that will automate the process of requesting barangay clearances and certifications. CMON can be customized (color theme, logos, forms, etc.) according to what the barangay needs.</p>
-            </div>
-          </div>
-          <div class="container-projects__project mt3" id="modernfix">
-            <div class="project__image-container">
-              <img src="img/modernfix.png" class="project__image"/>
-            </div>
-            <div class="project__description">
-              <p class="project__description__text">ModernFix is a local-web based application which addresses the problem of our client, Cholula. This application is a mix of a POS and Inventory system, when an order is inputted in the system, the application automatically deducts the ingredient inventory. Moreover, it can also generate sales and inventory reports which can be helpful for the client.</p>
-            </div>
+            <a class="carousel__control carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel__control carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <i class="fa-solid fa-arrow-right"></i>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
-        <div class="container-projects__entries--right">
-          <div class="container-projects__project" id="trace">
-            <div class="project__image-container">
-              <img src="img/trace.png" class="project__image"/>
-            </div>
-            <div class="project__description">
-              <p class="project__description__text">Trace is a windows standalone application developed to address the process efficiency problem experienced by the L&D QA Team at Infor.
-                Trace automatically compares two excel sheets containing JIRA QA Ticket lists (generated from JIRA). The application generates a new excel sheet that uses color coding to represent tickets that were retained/added/deleted/closed.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
+      </div> -->
       <!-- Project Modal (More Info) -->
       <div class="project__modal" id="modal">
         <div class="project__modal__content">
@@ -342,7 +371,23 @@
           </div>
         </div>
       </div>
+      <div class="footer">
+        &copy;2023 Gelwhyn Abad | All rights reserved.
+      </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script> -->
+
+
   </body>
 </html>

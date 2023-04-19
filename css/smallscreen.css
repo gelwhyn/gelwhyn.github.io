@@ -123,6 +123,22 @@ body .container-frontpage .container-frontpage__content__social-buttons .social-
   padding: 0px;
   color: #7892B5;
 }
+body .container-frontpage .frontpage__scroll__container {
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 4%;
+  --fa-beat-fade-opacity: 0.67;
+  --fa-beat-fade-scale: 1.05;
+  --fa-animation-duration: 2s;
+}
+body .container-frontpage .frontpage__scroll__container .scroll__redirect {
+  color: #D98481;
+  text-decoration: none;
+}
+body .container-frontpage .frontpage__scroll__container .scroll__indicator {
+  bottom: 0;
+  margin-bottom: 3vw;
+}
 body .container-aboutme {
   margin: 0;
   padding: 0;
@@ -135,16 +151,36 @@ body .container-aboutme {
 body .container-aboutme .container-aboutme__grid {
   margin-top: 2vw;
   margin-bottom: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+body .container-aboutme .container-aboutme__grid--left {
+  float: left;
+  width: 40%;
+  border-right: 2px dotted #D98481;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+body .container-aboutme .container-aboutme__grid--right {
+  float: right;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 body .container-aboutme .container-aboutme__image-container {
   float: left;
   width: 50%;
 }
 body .container-aboutme .container-aboutme__image-container .container-aboutme__image-container__image {
-  float: right;
   width: 50%;
   border-radius: 60%;
-  margin-right: 5%;
   padding: 3px;
   border: 2px dotted #91B5A9;
   box-shadow: 0 0 0 7px #fff, 0 0 0 8px #ddd;
@@ -156,9 +192,9 @@ body .container-aboutme .container-aboutme__info-container {
 body .container-aboutme .container-aboutme__info-container .container-aboutme__info-container__header {
   color: #91B5A9;
   margin-bottom: 0%;
+  font-weight: bold;
 }
 body .container-aboutme .container-aboutme__info-container .container-aboutme__info-container__content {
-  font-size: large;
   color: #7892B5;
   margin-top: 0;
 }
@@ -167,7 +203,7 @@ body .container-aboutme .container-aboutme__more-info-container {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 1vw 10vw;
+  padding: 1vw 2vw;
   width: 100%;
   display: flex;
 }
@@ -191,11 +227,14 @@ body .container-aboutme .container-aboutme__interests-container .container-about
   margin-top: 0;
 }
 body .container-aboutme .container-aboutme__interests-container .interests-container__icon {
-  padding: 3% 5%;
+  padding: 3% 2%;
   color: #91B5A9;
+  font-size: 3vw;
 }
 body .container-aboutme .container-aboutme__interests-container .container-aboutme__interests__label {
   margin: 0px;
+  padding: 1px;
+  height: 15px;
 }
 body .container-aboutme .container-aboutme__download-button {
   display: flex;
@@ -340,11 +379,14 @@ body .container-experience .container-experience__entries .container-experience_
 }
 body .container-projects {
   margin-top: 5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   color: #D98481;
+  width: 100%;
+}
+body .container-projects .carousel__control {
+  color: #D98481;
+}
+body .container-projects .carousel-inner {
+  margin: auto;
 }
 body .container-projects .container-projects__entries {
   display: flex;
@@ -362,7 +404,7 @@ body .container-projects .container-projects__entries--right {
   margin-left: 1%;
 }
 body .container-projects .container-projects__project {
-  width: 100%;
+  width: 60%;
   display: flex;
   direction: row;
   margin: 1%;
@@ -485,6 +527,17 @@ body .project__modal .project__modal__content .project__modal__description {
 body #modal {
   visibility: hidden;
 }
+body .footer {
+  bottom: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 1vw;
+  padding: 1vw 2vw;
+  text-align: center;
+  background-color: #D98481;
+  color: #ffffff;
+}
 body .anim-typewriter {
   animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
@@ -519,9 +572,15 @@ body .anim-typewriter {
   }
   body .container-aboutme .container-aboutme__grid {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+  }
+  body .container-aboutme .container-aboutme__grid--left {
+    width: 100%;
+    display: flex;
     flex-direction: row;
+  }
+  body .container-aboutme .container-aboutme__grid--right {
+    width: 100%;
   }
   body .container-aboutme .container-aboutme__image-container {
     float: left;
@@ -539,6 +598,8 @@ body .anim-typewriter {
     width: 45%;
     margin-right: 2%;
     word-break: break-all;
+    float: right;
+    text-align: left;
   }
   body .container-aboutme .container-aboutme__interests-container .container-aboutme__interests-container__icons {
     display: flex;
