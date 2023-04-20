@@ -7,16 +7,16 @@ var isMenuManuallyClicked = "false"
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener("click", function() {
     isMenuManuallyClicked = true
-    var current = document.getElementsByClassName("menu__item--active");
-    current[0].classList.remove(...["menu__item--active", "fa-beat", "fa-sm"])
-    this.firstElementChild.classList.add(...["menu__item--active", "fa-beat", "fa-sm"])
+    var current = document.getElementsByClassName("portfolio__menu__item--active");
+    current[0].classList.remove(...["portfolio__menu__item--active", "fa-beat", "fa-sm"])
+    this.firstElementChild.classList.add(...["portfolio__menu__item--active", "fa-beat", "fa-sm"])
     isMenuManuallyClicked = false
   });
 }
 
 //Navigation - Setting "Active" menu item while scrolling
-const sections = document.getElementsByClassName("container");
-const navLi = document.getElementsByClassName("menu__item");
+const sections = document.getElementsByClassName("portfolio__container");
+const navLi = document.getElementsByClassName("portfolio__menu__item");
 document.addEventListener("scroll", function(){
   var current = "";
 
@@ -28,14 +28,14 @@ document.addEventListener("scroll", function(){
   }
   for (let index = 0; index < navLi.length; index++) {
     if ((navLi[index].id).includes(current)) {
-      navLi[index].firstElementChild.classList.add(...["menu__item--active", "fa-beat", "fa-sm"]);
+      navLi[index].firstElementChild.classList.add(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
       // // window.location.href = navLi[index].href;
       // console.log(window.location.hash)
       // if(!isMenuManuallyClicked){
       //   window.location.hash = current; //conflicts when menu item is manually clicked
       // }
     }else{
-      navLi[index].firstElementChild.classList.remove(...["menu__item--active", "fa-beat", "fa-sm"]);
+      navLi[index].firstElementChild.classList.remove(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
     }
   }
 });
