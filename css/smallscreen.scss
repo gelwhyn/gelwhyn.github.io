@@ -453,6 +453,7 @@ body {
             .carousel-indicators{
                 top: 100%;
                 position: relative;
+                z-index: 1;
                  li{
                     background-color: $secondary-color;
                  }
@@ -891,6 +892,11 @@ body {
                     margin: 2vw;
                 }
             }
+        }
+
+        .footer{
+            font-size: 0.7em;
+            padding: 3vw 2vw;
         }
     }
 }

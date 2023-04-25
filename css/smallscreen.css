@@ -460,6 +460,7 @@ body .container-projects .container-projects__entries {
 body .container-projects .container-projects__entries .carousel-indicators {
   top: 100%;
   position: relative;
+  z-index: 1;
 }
 body .container-projects .container-projects__entries .carousel-indicators li {
   background-color: #D98481;
@@ -861,5 +862,9 @@ body .anim-typewriter {
   }
   body .project__modal .project__modal__content .project__modal__description {
     margin: 2vw;
+  }
+  body .footer {
+    font-size: 0.7em;
+    padding: 3vw 2vw;
   }
 }/*# sourceMappingURL=smallscreen.css.map */
