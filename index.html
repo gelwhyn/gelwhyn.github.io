@@ -13,12 +13,32 @@
     <title>Gelwhyn Abad</title>
   </head>
   <body id="body">
-    <div class="main">
+    <!-- Project Modal (More Info) -->
+    <div class="project__modal" id="modal">
+      <div class="project__modal__content">
+        <div class="project__modal__action-button">
+          <a class="modal__btn--close" id="modalClose"><i class="fa-solid fa-circle-xmark fa-1x"></i></a>
+        </div>
+        <div class="project__modal__name" id="projectName">
+        </div>
+        <div class="project__modal__images" id="projectImages">
+        </div>
+        <div class="project__modal__images__btn-container" id="imageButtons">
+          <button class="portfolio__button images__btn" id="previous"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="portfolio__button images__btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="project__modal__description">
+          <ul id="projectDescription">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="menu__container" id="menuContainer">
       <!-- Menu/Navbar -->
       <div class="portfolio__menu" id="menu">
         <a class="portfolio__menu__item" id="menu__item__frontpage" href="#frontpage">
           <i
-            class="fa-solid fa-circle fa-2xs fa-sm fa-beat menu__item__icon menu__item--active"
+            class="fa-solid fa-circle fa-2xs fa-sm fa-beat menu__item__icon portfolio__menu__item--active"
           ></i>
         </a>
         <a class="portfolio__menu__item" id="menu__item__aboutme" href="#aboutme">
@@ -32,11 +52,12 @@
         </a>
         <a class="portfolio__menu__item" id="menu__item__projects" href="#projects">
           <i class="fa-solid fa-circle fa-2xs menu__item__icon"></i>
-      </a>
+        </a>
       </div>
-
+    </div>
+    <div class="sections__container" id="sectionsContainer">
       <!-- Front Page -->
-      <div class="portfolio__container container-frontpage" id="frontpage">
+      <section class="portfolio__container container-frontpage" id="frontpage">
         <div class="container-frontpage__content">
           <h1
             class="container-frontpage__content-header text--align-center anim-typewriter"
@@ -64,10 +85,10 @@
             <i class="fas fa-angle-double-down scroll__indicator"></i>
           </a>
         </div>
-      </div>
+      </section>
 
       <!-- About Me -->
-      <div class="portfolio__container container-aboutme" id="aboutme">
+      <section class="portfolio__container container-aboutme" id="aboutme">
         <h2 class="container__header container-aboutme__header">ABOUT ME</h2>
         <div class="container-aboutme__grid">
           <div class="container-aboutme__grid--left">
@@ -133,10 +154,10 @@
           </div>
         </div>
       </div>
-      </div>
+    </section>
 
       <!-- Skills -->
-      <div class="portfolio__container container-skills mt3" id="skills">
+      <section class="portfolio__container container-skills mt3" id="skills">
         <h3 class="container__header container-skills__header">MY TECH STACK</h3>
         <div class="container-skills__skills">
           <div class="container-skills__skill">
@@ -217,10 +238,10 @@
             <p class="skill__label">Firebase</p>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Internship and Education -->
-      <div class="portfolio__container container-experience mt3" id="experience">
+      <section class="portfolio__container container-experience mt3" id="experience">
         <h3 class="container__header container-experience__header">EDUCATION AND WORK EXPERIENCE</h3>
         <div class="container-experience__entries">
             <div class="container-experience__entries container-experience__entries--left">
@@ -314,12 +335,12 @@
                 </div>
             </div>
         </div>
-      </div>
+      </section>
       <!-- Projects -->
-      <div class="portfolio__container container-projects mt3" id="projects" data-ride="carousel">
+      <section class="portfolio__container mt3 container-projects" id="projects">
         <h3 class="container__header container-projects__header">PROJECTS</h3>
         <div class="container-projects__entries">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div id="projectSlider" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#projects" data-slide-to="0" class="active"></li>
               <li data-target="#projects" data-slide-to="1"></li>
@@ -358,43 +379,24 @@
                   </div>
               </div>
             </div>
-            <a class="carousel__control carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel__control carousel-control-prev" href="#projectSlider" role="button" data-slide="prev">
               <i class="fa-solid fa-arrow-left"></i>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel__control carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel__control carousel-control-next" href="#projectSlider" role="button" data-slide="next">
               <i class="fa-solid fa-arrow-right"></i>
               <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
-      </div>
-      <!-- Project Modal (More Info) -->
-      <div class="project__modal" id="modal">
-        <div class="project__modal__content">
-          <div class="project__modal__action-button">
-            <a class="modal__btn--close" id="modalClose"><i class="fa-solid fa-circle-xmark fa-1x"></i></a>
-          </div>
-          <div class="project__modal__name" id="projectName">
-          </div>
-          <div class="project__modal__images" id="projectImages">
-          </div>
-          <div class="project__modal__images__btn-container" id="imageButtons">
-            <button class="portfolio__button images__btn" id="previous"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="portfolio__button images__btn" id="next"><i class="fa-solid fa-arrow-right"></i></button>
-          </div>
-          <div class="project__modal__description">
-            <ul id="projectDescription">
-            </ul>
-          </div>
+        <!-- Footer -->
+        <div class="footer">
+          &copy;2023 GelwhynAbad | All rights reserved.
         </div>
-      </div>
-      <!-- Footer -->
-      <div class="footer">
-        &copy;2023 GelwhynAbad | All rights reserved.
-      </div>
+      </section>
     </div>
     <script src="js/script.js"></script>
+    <script src="/dist/fullpage-scroll.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
