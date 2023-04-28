@@ -1,6 +1,51 @@
 document.getElementById("modal").style.visibility = "hidden"
 console.log(screen.width)
 
+//Navigation One Page Scroll
+document.addEventListener("DOMContentLoaded", function() {
+  var fps = new FullPageScroll('sectionsContainer', { 
+          mediaQuery: 'screen and (min-width: 801px)',
+            // animation speed in ms
+            transitionTime: 1000,
+            // auto goto the first section
+            goToTopOnLast: true,
+            // selector of slides
+            slideSelector: "section",
+  });
+  var menuContainer = document.getElementById("menu");
+  var menuItems = menuContainer.getElementsByTagName("a");
+  const navLi = document.getElementsByClassName("portfolio__menu__item");
+    fps.onslide = function(e) {
+      if(e.target.currentSlide === e.target.slides.length-1){
+        fps.goToFirstSlide();
+      }
+      for (let index = 0; index < navLi.length; index++) {
+        if (index === e.target.currentSlide) {
+          navLi[index].firstElementChild.classList.add(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
+        }else{
+          navLi[index].firstElementChild.classList.remove(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
+        }
+      }
+    }
+
+    menuItems[0].addEventListener("click", function(){
+      console.log("hahhasdd")
+      fps.goToSlide(0)
+    });
+    menuItems[1].addEventListener("click", function(){
+      fps.goToSlide(1)
+    });
+    menuItems[2].addEventListener("click", function(){
+      fps.goToSlide(2)
+    });
+    menuItems[3].addEventListener("click", function(){
+      fps.goToSlide(3)
+    });
+    menuItems[4].addEventListener("click", function(){
+      fps.goToSlide(4)
+    });
+}, {passive: true});
+
 //Navigation - Setting "Active" or "Selected" button
 if(screen.width <= 800){
   var menuContainer = document.getElementById("menu");
@@ -33,11 +78,6 @@ if(screen.width <= 800){
     for (let index = 0; index < navLi.length; index++) {
       if ((navLi[index].id).includes(current)) {
         navLi[index].firstElementChild.classList.add(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
-        // // window.location.href = navLi[index].href;
-        // console.log(window.location.hash)
-        // if(!isMenuManuallyClicked){
-        //   window.location.hash = current; //conflicts when menu item is manually clicked
-        // }
       }else{
         navLi[index].firstElementChild.classList.remove(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
       }
@@ -206,72 +246,3 @@ for (let i = 0; i < imageArrowKeys.length; i++) {
     }
   })
 }
-
-//sample
-document.addEventListener("DOMContentLoaded", function() {
-  var fps = new FullPageScroll('sectionsContainer', { 
-          mediaQuery: 'screen and (min-width: 801px)',
-            // animation speed in ms
-            transitionTime: 1000,
-            // auto goto the first section
-            goToTopOnLast: true,
-            // selector of slides
-            slideSelector: "section",
-  });
-  var menuContainer = document.getElementById("menu");
-  var menuItems = menuContainer.getElementsByTagName("a");
-  const navLi = document.getElementsByClassName("portfolio__menu__item");
-  if(screen.width > 800){
-    console.log(screen.width)
-    fps.onslide = function(e) {
-      console.log("sioiiiWS")
-      // console.log("Slide "+(e.target.currentSlide+1)+" of "+e.target.slides.length);
-      // console.log(typeof(document.getElementById("sectionsContainer").style.transform), "hefre")
-      if(e.target.currentSlide === e.target.slides.length-1){
-        fps.goToFirstSlide();
-        console.log("heh")
-      }
-      for (let index = 0; index < navLi.length; index++) {
-        if (index === e.target.currentSlide) {
-          // console.log(navLi[index].id, "heere")
-          navLi[index].firstElementChild.classList.add(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
-        }else{
-          navLi[index].firstElementChild.classList.remove(...["portfolio__menu__item--active", "fa-beat", "fa-sm"]);
-        }
-      }
-    }
-
-    menuItems[0].addEventListener("click", function(){
-      console.log("hahhasdd")
-      fps.goToSlide(0)
-    });
-    menuItems[1].addEventListener("click", function(){
-      fps.goToSlide(1)
-    });
-    menuItems[2].addEventListener("click", function(){
-      fps.goToSlide(2)
-    });
-    menuItems[3].addEventListener("click", function(){
-      fps.goToSlide(3)
-    });
-    menuItems[4].addEventListener("click", function(){
-      fps.goToSlide(4)
-    });
-}
-
-
-  //STILL NOT WORKING KAINIS
-  // for (let i = 0; i < menuItems.length; i++) {
-  //   menuItems[i].addEventListener("click", function() {
-  //     // menuItems[i].click();
-  //     // document.getElementById(menuItems[i].id).click();
-  //     // const position = 100*i === 0 ? "0px" : (100*i)*-1 +"vh"
-  //     // document.getElementById("sectionsContainer").style.transform = `translateY(${position}`
-  //     fps.goToSlide(i)
-      
-  //     // var current = document.getElementsByClassName("portfolio__menu__item--active");
-  //     // current[0].classList.remove(...["portfolio__menu__item--active", "fa-beat", "fa-sm"])
-  //     // this.firstElementChild.classList.add(...["portfolio__menu__item--active", "fa-beat", "fa-sm"])
-  //   });
-  // }
-}, {passive: true});

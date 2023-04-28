@@ -72,7 +72,7 @@ body {
         border-width: 0;
         padding-right: 1%;
         position: fixed;
-        z-index: 2;
+        z-index: 1;
         right: 0; 
         // top: 0;
 
@@ -175,24 +175,20 @@ body {
             @include flex-center-row();
         }
         .container-aboutme__grid--left{
-            float: left;
             width: 45%;
             border-right: 2px dotted $secondary-color;
             @include flex-center();
             text-align: center;
         }
         .container-aboutme__grid--right{
-            float: right;
             width: 55%;
             @include flex-center();
             // border-left: 2px dotted $secondary-color;
         }
         .container-aboutme__image-container{
-            float: left;
             width: 50%;
 
             .container-aboutme__image-container__image{
-                // float: right;
                 width: 50%;
                 border-radius: 60%;
                 // margin-right: 5%;
@@ -204,7 +200,6 @@ body {
             }
         }
         .container-aboutme__info-container{
-            float: right;
             width: 50%;
             margin-top: 1vw;
 
@@ -323,7 +318,7 @@ body {
         }
         .container-experience__entries{
             @include default-spacing();
-            // @include flex-center-row();
+            @include flex-center-row();
             // width: 100%;
             .container-experience__entries__header{
                 @include flex-center-row();
@@ -342,12 +337,10 @@ body {
             }
             .container-experience__entries--left{
                 width: 50%;
-                float: left;
                 @include flex-center();
             }
             .container-experience__entries--right{
                 width: 50%;
-                float: right;
                 @include flex-center();
             }
             .container-experience__entries__entry{
@@ -356,14 +349,13 @@ body {
                 height: 35vh;
                 padding: 2% 3%;
                 margin-top: 2vw;
+                @include flex-center-row();
                 // padding: 3%;
                 // box-shadow: 10px 10px #8CB9C0;
                 .entry__design{
                     width: 5%;
                     height: 100%;
                     display: flex;
-                    float: left;
-                    // align-items: flex-end;
                     justify-content: flex-end;
                     margin-right: 2%;
 
@@ -481,12 +473,10 @@ body {
 
         .container-projects__entries--left{
             width: 49%;
-            float: left;
             margin-right: 1%;
         }
         .container-projects__entries--right{
             width: 49%;
-            float: right;
             margin-left: 1%;
         }
         .container-projects__project{
@@ -549,7 +539,7 @@ body {
 
     .project__modal{
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         padding-top: 100px;
         left: 0;
         top: 0;
@@ -572,8 +562,8 @@ body {
 
             .project__modal__action-button{
                 margin: 1% 2%;
-                float: right;
-                display: block;
+                display: flex;
+                justify-content: end;
                 .modal__btn--close{
                     color: $accent-color2;
                     font-size: 1.5em;
@@ -590,7 +580,8 @@ body {
                     margin: 1% 2%;
                     color: $accent-color;
                     font-weight: 500;
-                    font-size:larger
+                    font-size:larger;
+                    text-align: center;
                 }
             }
             .project__modal__images{
@@ -677,6 +668,47 @@ body {
     
             .container-frontpage{
                 @include flex-center();
+                .container-frontpage__animation{
+                    display: flex;
+                    margin-bottom: 10%;
+
+                    .container-frontpage__animation__circle {
+                        // position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                        background-color: $accent-color2;
+                        animation: move-the-circle 1s infinite;
+                        transform-origin: center center;
+                      }
+                      
+                      @for $num from 1 through 9 {
+                        .container-frontpage__animation__circle:nth-child(#{$num}) {
+                          left: ($num - 1) * 30px;
+                          animation-delay: $num * 0.5s;
+                        }
+                      }
+                      
+                      @keyframes move-the-circle {
+                        0% {
+                          transform: translate(0, 0) scale(1);
+                          opacity: 1;
+                          background-color: $accent-color2;
+                        }
+                        50% {
+                          transform: translate(0, 25px) scale(.5);
+                          opacity: .5;
+                          background-color: $gray;
+                        }
+                        100% {
+                          transform: translate(0, 0) scale(1);
+                          opacity: 1;
+                          background-color: $accent-color2;
+                        }
+                      }
+                }
                 .container-frontpage__content__social-buttons{
                     .social-buttons__btn{
                         margin: 0px 2%;
@@ -703,13 +735,11 @@ body {
                     width: 100%;
                 }
                 .container-aboutme__image-container{
-                    float: left;
                     width: 45%;
                     height: 100%;
                     margin-left: 0px;
         
                     .container-aboutme__image-container__image{
-                        float: right;
                         width: 80%;
                         right: 0;
                         margin-right: 5vw;
@@ -719,7 +749,6 @@ body {
                     width: 45%;
                     margin-right: 2%;
                     word-break: break-all;
-                    float: right;
                     text-align: left;
                 }
                 .container-aboutme__more-info-container{
@@ -787,6 +816,7 @@ body {
                 }
                 .container-experience__entries{
                     width: 100%;
+                    @include flex-center();
     
                     .container-experience__entries__header{
                         margin: 2% 0px;
@@ -805,14 +835,14 @@ body {
                         margin-top: 3%;
                         height: unset;
                         width: 85%;
+                        align-items: start;
     
                         .entry__design{
                             margin-top: 2%;
                             width: 5%;
                             height: 100%;
                             display: flex;
-                            float: left;
-                            // align-items: flex-end;
+                            align-items: flex-start;
                             justify-content: flex-end;
                             margin-right: 2%;
         
@@ -916,9 +946,14 @@ body {
         }
     
         .project__modal{
+            z-index: 5;
             .project__modal__content{
                 width: 80%;
-
+                .project__modal__name{
+                    .project__name{
+                        font-size: medium;
+                    }
+                }
                 .project__modal__images{
                     margin-bottom: 5vw;
                     .project__image{
@@ -941,6 +976,7 @@ body {
                 }
                 .project__modal__description{
                     margin: 2vw;
+                    font-size: medium;
                 }
             }
         }
