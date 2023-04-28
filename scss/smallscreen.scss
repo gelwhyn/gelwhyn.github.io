@@ -81,6 +81,7 @@ body {
         }
         .portfolio__menu__item{
             margin-bottom: 20%;
+            pointer-events: none;
         }
     
         .portfolio__menu__item--active{
@@ -647,6 +648,16 @@ body {
         .portfolio__menu{
             margin-right: 0.5%;
         }
+
+        .menu__container{
+            margin-right: 1%;
+
+            .portfolio__menu{
+                .portfolio__menu__item{
+                    pointer-events: auto;
+                }
+            }
+        }
         .sections__container{
             .portfolio__container{
                 overflow: visible;
@@ -656,10 +667,6 @@ body {
                 padding-bottom: 5%;
                 position: static;
                 height: fit-content;
-            }
-    
-            .menu{
-                margin-right: 1%;
             }
     
             .container__header{

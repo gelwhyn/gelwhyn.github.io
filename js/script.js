@@ -1,5 +1,13 @@
 document.getElementById("modal").style.visibility = "hidden"
-console.log(screen.width)
+
+// if(screen.width > 800){
+//   var menuContainer = document.getElementById("menu");
+//   var menuItems = menuContainer.getElementsByTagName("a");
+
+//   for(let loop = 0; loop <menuItems.length; loop++){
+//     menuItems[loop].href ='';
+//   }
+// }
 
 //Navigation One Page Scroll
 document.addEventListener("DOMContentLoaded", function() {
@@ -27,23 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     }
-
-    menuItems[0].addEventListener("click", function(){
-      console.log("hahhasdd")
-      fps.goToSlide(0)
-    });
-    menuItems[1].addEventListener("click", function(){
-      fps.goToSlide(1)
-    });
-    menuItems[2].addEventListener("click", function(){
-      fps.goToSlide(2)
-    });
-    menuItems[3].addEventListener("click", function(){
-      fps.goToSlide(3)
-    });
-    menuItems[4].addEventListener("click", function(){
-      fps.goToSlide(4)
-    });
 }, {passive: true});
 
 //Navigation - Setting "Active" or "Selected" button
