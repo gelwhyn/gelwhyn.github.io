@@ -151,6 +151,7 @@ body {
             bottom:0;
             position: absolute;
             margin-bottom: 4%;
+            color: $secondary-color;
             --fa-beat-fade-opacity: 0.67;
             --fa-beat-fade-scale: 1.05;
             --fa-animation-duration: 2s;
@@ -388,6 +389,8 @@ body {
                     width: 90%;
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
 
                     .entry__content{
                         color: white;
@@ -818,9 +821,6 @@ body {
                 overflow: hidden;
                 height: fit-content;
                 padding: 30px;
-                .container-experience__header{
-                    // font-size: 300%;
-                }
                 .container-experience__entries{
                     width: 100%;
                     @include flex-center();

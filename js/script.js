@@ -1,14 +1,5 @@
 document.getElementById("modal").style.visibility = "hidden"
 
-// if(screen.width > 800){
-//   var menuContainer = document.getElementById("menu");
-//   var menuItems = menuContainer.getElementsByTagName("a");
-
-//   for(let loop = 0; loop <menuItems.length; loop++){
-//     menuItems[loop].href ='';
-//   }
-// }
-
 //Navigation One Page Scroll
 document.addEventListener("DOMContentLoaded", function() {
   var fps = new FullPageScroll('sectionsContainer', { 
@@ -132,6 +123,7 @@ var modalContent = {
     details: [
       "A solo project given during my first internship at Infor PSSC Inc.",
       "Automates the comparison of JIRA Ticket List excel sheets needed by the Quality Assurance Team to track the tickets needed for the current sprint.",
+      "The application generates a new excel sheet that uses color coding (row color fill) to represent tickets that were retained/added/deleted/closed.",
       "Developed using: C# (Windows Form)",
     ]
   },

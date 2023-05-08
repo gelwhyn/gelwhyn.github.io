@@ -129,6 +129,7 @@ body .container-frontpage .frontpage__scroll__container {
   bottom: 0;
   position: absolute;
   margin-bottom: 4%;
+  color: #D98481;
   --fa-beat-fade-opacity: 0.67;
   --fa-beat-fade-scale: 1.05;
   --fa-animation-duration: 2s;
@@ -385,6 +386,8 @@ body .container-experience .container-experience__entries .container-experience_
   width: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 body .container-experience .container-experience__entries .container-experience__entries__entry .entry__details .entry__content {
   color: white;
